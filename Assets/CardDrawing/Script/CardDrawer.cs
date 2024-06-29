@@ -22,7 +22,7 @@ public class CardDrawer : MonoBehaviour
     void Start()
     {
         InitializeCards();
-        DrawCards(5);
+        DrawCards(10);
     }
 
     // Update is called once per frame
@@ -104,7 +104,7 @@ public class CardDrawer : MonoBehaviour
 
     public void RefillCard()
     {
-        int diff = 5 - _handCards.Count;
+        int diff = 10 - _handCards.Count;
         
         DrawCards(diff);
     }
