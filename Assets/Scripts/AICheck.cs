@@ -107,6 +107,17 @@ public class AICheck : MonoBehaviour
             return i;
         }
 
+        // 리스트에 아무것도 없을 때
+        List<int> zeroCount = new List<int>();
+        for (int i = 1; i <= 45; i++)
+        {
+            zeroCount.Add(i);
+        }
+        var randomNumber = zeroCount.OrderBy(x => random.Next());
+        foreach (var i in randomNumber)
+        {
+            return i;
+        }
         return 0;
     }
 
@@ -119,13 +130,6 @@ public class AICheck : MonoBehaviour
         
         
         nowTurn = 0;
-        //TODO: 지울 것
-        // test[.Add(3);
-        // test1.Add(3); test1.Add(4);
-        // test2.Add(3); test2.Add(4); test2.Add(1);
-        // test3.Add(3); test3.Add(4); test3.Add(1); test3.Add(2);
-        // test4.Add(3); test4.Add(4); test4.Add(1); test4.Add(2); test4.Add(5); 
-        // test5.Add(3); test5.Add(4); test5.Add(1); test5.Add(2); test5.Add(5); 
         
         
         
