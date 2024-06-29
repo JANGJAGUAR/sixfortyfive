@@ -25,8 +25,8 @@ public class LoadScene : MonoBehaviour
     void Update()
     {
         time += Time.deltaTime;
-        loadCard.transform.Rotate(new Vector3(0, 5, 0));
-        if (count <= 3)
+        loadCard.transform.Rotate(new Vector3(0, 1, 0));
+        if (count % 3 != 0)
         {
             loadText.text += ".";
             count++;
@@ -34,7 +34,7 @@ public class LoadScene : MonoBehaviour
         else
         {
             loadText.text = "Loading";
-            count = 0;
+            count = 1;
         }
     }
 

@@ -131,7 +131,7 @@ public class AICheck : MonoBehaviour
     public int Result(List<int> chooseBallList, List<int> answerBallList)
     {
         
-
+        // 맞은 개수 체크
         int cnt = 0;
         for (int i = 0; i < 6; i++)
         {
@@ -146,6 +146,8 @@ public class AICheck : MonoBehaviour
             
         }
 
+        // 순위가 있으면 클리어, 없으면 실패
+        // 순위에 따라 돈 추가
         if (cnt == 5)
         {
             for (int i = 0; i < 6; i++)
@@ -154,7 +156,8 @@ public class AICheck : MonoBehaviour
                 if (answerBallList[6] == chooseBallList[i])
 
                 {
-                    return 2;
+                    GameManager.Instance.isClear = true;
+                    MoneyManager.Instance.AddMoney(2);
                 }
             }
             
@@ -162,24 +165,30 @@ public class AICheck : MonoBehaviour
         
         if (cnt == 6)
         {
-            return 1;
+            GameManager.Instance.isClear = true;
+            MoneyManager.Instance.AddMoney(1);
         }
 
         if (cnt == 5)
         {
-            return 3;
+            GameManager.Instance.isClear = true;
+            MoneyManager.Instance.AddMoney(3);
         }
 
         if (cnt == 4)
         {
-            return 4;
+            GameManager.Instance.isClear = true;
+            MoneyManager.Instance.AddMoney(4);
         }
 
         if (cnt == 3)
         {
-            return 5;
+            GameManager.Instance.isClear = true;
+            MoneyManager.Instance.AddMoney(5);
         }
-        return cnt+100;
+
+        GameManager.Instance.isClear = false;
+        return 0;
     }
 
     public void ResetCheck()
