@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8659a8362cd4738a9c7515b8f678a30, type: 3}
   m_Name: Card_Less
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: 0}
   type: 2
   number: 0
   operation: 0
-  logic: 3
+  logic: 4

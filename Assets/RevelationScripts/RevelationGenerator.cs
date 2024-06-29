@@ -12,6 +12,7 @@ using UnityEngine.Events;
 public class RevelationGenerator : MonoBehaviour
 {
     private Operator _latestOperator = Operator.None;
+    private Logic _lastestLogic = Logic.None;
     public UnityEvent<List<int>> onUpdateAnswerSheet;
     public List<int> answerSheet = new List<int>();
     public int numericPart;
@@ -38,6 +39,7 @@ public class RevelationGenerator : MonoBehaviour
         }
         numericPart = 0;
         _latestOperator = Operator.None;
+        _lastestLogic = Logic.None;
     }
 
     void GreaterThan()
@@ -64,6 +66,16 @@ public class RevelationGenerator : MonoBehaviour
 
     void Not()
     {
+        answerSheet.Clear();
+        for (int i = 1; i <= 45; i++)
+        {
+            if(i==numericPart) continue;
+            answerSheet.Add(i);
+        }
+    }
+
+    void Reverse()
+    {
         List<int> tmpAnswerSheet = new List<int>();
 
         for (int i = 1; i <= 45; i++)
@@ -86,68 +98,36 @@ public class RevelationGenerator : MonoBehaviour
         
         answerSheet.Clear();
         answerSheet = tmpAnswerSheet;
+    }
 
+    void Equal()
+    {
+        answerSheet.Clear();
+        answerSheet.Add(numericPart);
     }
 
     void MultipleOf()
     {
-        foreach (var element in answerSheet)
+        for (int i = answerSheet.Count - 1; i >= 0; i--)
         {
-            if (element % numericPart != 0)
+            if (answerSheet[i] % numericPart != 0)
             {
-                answerSheet.Remove(element);
+                answerSheet.RemoveAt(i);
             }
         }
     }
 
     void DivisorOf()
     {
-        foreach (var element in answerSheet)
+        for (int i = answerSheet.Count - 1; i >= 0; i--)
         {
-            if (numericPart % element != 0)
+            if (numericPart%answerSheet[i] != 0)
             {
-                answerSheet.Remove(element);
+                answerSheet.RemoveAt(i);
             }
         }
     }
-
-    void DebugAnswerSheet()
-    {
-        string debugStr = "In the answerSheet: ";
-        foreach (var element in answerSheet)
-        {
-            debugStr += $"{element}, ";
-        }
-        Debug.Log(debugStr);
-    }
-
-    private void OnGUI()
-    {
-        if (GUI.Button(new Rect(1800, 100, 100, 100), "Not"))
-        {
-            Not();
-            onUpdateAnswerSheet.Invoke(answerSheet);
-        }
-
-        if (GUI.Button(new Rect(1800, 200, 100, 100), "Greater Than"))
-        {
-            GreaterThan();
-            onUpdateAnswerSheet.Invoke(answerSheet);
-        }
-
-        if (GUI.Button(new Rect(1800, 300, 100, 100), "Less Than"))
-        {
-            LessThan();
-            onUpdateAnswerSheet.Invoke(answerSheet);
-        }
-        
-        
-        if (GUI.Button(new Rect(1800, 400, 100, 100), "Publish"))
-        {
-            onUpdateAnswerSheet.Invoke(answerSheet);
-        }
-    }
-
+    
     void ApplyCard(CardType cardType, int number, Operator op, Logic logic)
     {
         switch (cardType)
@@ -169,48 +149,148 @@ public class RevelationGenerator : MonoBehaviour
                         numericPart /= number;
                         break;
                 }
-                
                 if (numericPart > 99) numericPart = 99;
                 if (numericPart < 0) numericPart = 0;
-
+                
                 _latestOperator = Operator.None;
                 break;
             case CardType.Operator:
-                //if (_latestOperator != Operator.None) return;
-                
                 _latestOperator = op;
-                
                 break;
             case CardType.Logical:
                 switch (logic)
                 {
+                    case Logic.Equal:
+                        _lastestLogic = logic;
+                        break;
                     case Logic.Not:
-                        Not();
+                        if (_lastestLogic != Logic.None)
+                        {
+                            if (_lastestLogic==Logic.Equal)
+                            {
+                                _lastestLogic = Logic.Not;
+                            }
+
+                            if (_lastestLogic == Logic.Not)
+                            {
+                                _lastestLogic = Logic.Equal;
+                            }
+                            else if (_lastestLogic == Logic.Greater)
+                            {
+                                _lastestLogic = Logic.EqualOrLess;
+                            }
+                            else if (_lastestLogic == Logic.Less)
+                            {
+                                _lastestLogic = Logic.EqualOrGreater;
+                            }
+                            else if (_lastestLogic == Logic.EqualOrLess)
+                            {
+                                _lastestLogic = Logic.Greater;
+                            }
+                            else if (_lastestLogic == Logic.EqualOrGreater)
+                            {
+                                _lastestLogic = Logic.Less;
+                            }
+                        }
+                        else
+                        {
+                            _lastestLogic = logic;
+                        }
                         break;
                     case Logic.Less:
-                        LessThan();
+                        _lastestLogic = logic;
                         break;
                     case Logic.Greater:
-                        GreaterThan();
+                        _lastestLogic = logic;
                         break;
                     case Logic.MultipleOf:
-                        MultipleOf();
+                        _lastestLogic = logic;
                         break;
                     case Logic.DivisionOf:
-                        DivisorOf();
+                        _lastestLogic = logic;
                         break;
                 }
                 break;
         }
         
-        RevelationEventBus.Publish(RevelationEventType.ApplyCardEffect, numericPart, _latestOperator.ToString(), logic.ToString());
+        RevelationEventBus.Publish(RevelationEventType.ApplyCardEffect, numericPart, _latestOperator.ToString(), _lastestLogic.ToString());
+        ReWriteAnswerSheet();
         onUpdateAnswerSheet.Invoke(answerSheet);
+    }
+
+    public void ReWriteAnswerSheet()
+    {
+        answerSheet.Clear();
+        switch (_lastestLogic)
+        {
+            case Logic.Equal:
+                for (int i = 1; i <= 45; i++)
+                {
+                    if (i == numericPart)
+                    {
+                        answerSheet.Add(i);    
+                    }
+                }
+                break;
+            case Logic.Not:
+                for (int i = 1; i <= 45; i++)
+                {
+                    if (i != numericPart)
+                    {
+                        answerSheet.Add(i);    
+                    }
+                }
+                break;
+            case Logic.None:
+                for (int i = 1; i <= 45; i++)
+                {
+                    answerSheet.Add(i);
+                }
+                break;
+            case Logic.Greater:
+                for (int i = 1; i <= 45; i++)
+                {
+                    if (i > numericPart)
+                    {
+                        answerSheet.Add(i);
+                    }
+                }
+                break;
+            case Logic.Less:
+                for (int i = 1; i <= 45; i++)
+                {
+                    if (i < numericPart)
+                    {
+                        answerSheet.Add(i);
+                    }
+                }
+                break;
+            case Logic.EqualOrGreater:
+                for (int i = 1; i <= 45; i++)
+                {
+                    if (i >= numericPart)
+                    {
+                        answerSheet.Add(i);
+                    }
+                }
+                break;
+            case Logic.EqualOrLess:
+                for (int i = 1; i <= 45; i++)
+                {
+                    if (i <= numericPart)
+                    {
+                        answerSheet.Add(i);
+                    }
+                }
+                break;
+            
+        }
     }
 
     public void PublishRevelation()
     {
         ReInitializeAnswerSheet();
         onUpdateAnswerSheet.Invoke(answerSheet);
-        RevelationEventBus.Publish(RevelationEventType.PublishRevelation, numericPart, _latestOperator.ToString(), "None");
+        RevelationEventBus.Publish(RevelationEventType.PublishRevelation, numericPart, _latestOperator.ToString(), _lastestLogic.ToString());
     }
 }
