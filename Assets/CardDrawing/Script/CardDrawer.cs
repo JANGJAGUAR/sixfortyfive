@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR;
 
 public class CardDrawer : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class CardDrawer : MonoBehaviour
         if (Input.GetKeyDown(drawingKey))
         {
             Instantiate(card, hand.transform);
+            hand.GetComponent<PlayerHand>().HandArrange();
         }
     }
 
