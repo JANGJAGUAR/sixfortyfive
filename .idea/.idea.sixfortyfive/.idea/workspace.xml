@@ -4,18 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e538f2d-6f4a-45a5-9f75-8728d002b00d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.sixfortyfive/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.sixfortyfive/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ElementsScripts/MoneyManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ElementsScripts/MoneyManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LoadingScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LoadingScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestEndScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestEndScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AICheck.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AICheck.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EndObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EndObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LoadScene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LoadScene.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+    <list default="true" id="7e538f2d-6f4a-45a5-9f75-8728d002b00d" name="Changes" comment=""
+      <change beforePath="$PROJECT_DIR$/Assets/RevelationScripts/NumericRevelation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RevelationScripts/NumericRevelation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RevelationScripts/RevelationGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RevelationScripts/RevelationGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
