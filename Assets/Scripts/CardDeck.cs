@@ -8,8 +8,6 @@ using Random = System.Random;
 
 public class CardDeck : MonoBehaviour
 {
-    public List<Cards> cardsList;
-    
     public List<int> deckNumberList;
     public List<int> handNumberList;
     public List<int> trashNumberList;
@@ -26,16 +24,10 @@ public class CardDeck : MonoBehaviour
     //지금 손의 카드 개수
     private int _nowHandNumber;
     
+    public float spacing = 1.0f;
+    
     void Start()
     {
-        cardsList = new List<Cards>();
-        
-        //TODO: 카드 덱 하드코딩
-        for (int i = 0; i < maxCardNumber; i++)
-        {
-            var card = new Cards(i);
-            cardsList.Add(card);
-        }
         
         deckNumberList = new List<int>();
         handNumberList = new List<int>();
@@ -53,9 +45,21 @@ public class CardDeck : MonoBehaviour
         // }
     }
     
+    public void HandArrange()
+    {
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            Transform child = transform.GetChild(i);
+            child.localPosition = new Vector3(child.localPosition.x, child.localPosition.y, transform.childCount - (i * spacing));
+        }
+    }
+    
+    
     //시작 시, 혹은 셔플 시 카드를 섞고 위의 (10)장만 꺼내서 리스트에 넣음
     public void CardShuffle() //TODO: add param, 일정개수만 셔플로 추가 할수도 있음
     {
+        
+        HandArrange();
         var random = new Random();
         var randomizedList = deckNumberList.OrderBy(x => random.Next());
         

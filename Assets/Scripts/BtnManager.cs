@@ -6,13 +6,13 @@ using UnityEngine;
 public class BtnManager : MonoBehaviour
 {
     //TODO: 메인으로
-    private GameObject _frame;
+    public GameObject _frame;
 
     public int putdownNum=0;
     
     void Start()
     {
-        _frame = GameObject.Find("hands");
+        
     }
     
     void Update()
@@ -26,7 +26,9 @@ public class BtnManager : MonoBehaviour
     }
     public void ShuffleBtn()
     {
+        Debug.Log("f");
         _frame.GetComponent<CardDeck>().CardShuffle();
+        
     }
     
     public void PutDownBtn()

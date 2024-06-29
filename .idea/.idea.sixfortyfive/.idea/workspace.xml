@@ -5,31 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e538f2d-6f4a-45a5-9f75-8728d002b00d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.sixfortyfive/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.sixfortyfive/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefebs/CardDummyMerge.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefebs/CardDummyMerge.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/TestCardDraw.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/shuffle_draw.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/shuffle_draw.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AICheck.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CardMoveMerge.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CardMoveMerge.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TurnManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TurnManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CardDrawing/Prefab/Card.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CardDrawing/Prefab/Card.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CardDrawing/Script/Card.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CardDrawing/Script/Card.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CardDrawing/Script/CardDrag.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CardDrawing/Script/CardDrag.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CardDrawing/Script/CardDrawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CardDrawing/Script/CardDrawer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CardDrawing/Script/PlayerHand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CardDrawing/Script/PlayerHand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CardScripts/CardScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CardScripts/CardScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CardScripts/Logic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CardScripts/Logic.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CardScripts/Operator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CardScripts/Operator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RevelationScripts/LogicalRevelation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RevelationScripts/LogicalRevelation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RevelationScripts/NumericRevelation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RevelationScripts/NumericRevelation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RevelationScripts/RevelationEventBus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RevelationScripts/RevelationEventBus.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RevelationScripts/RevelationEventType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RevelationScripts/RevelationEventType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RevelationScripts/RevelationGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RevelationScripts/RevelationGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefebs/BallDummy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefebs/BallDummy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestCardDrawing.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestCardDrawing.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestCardDraw.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BallDeck.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BallDeck.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Balls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Balls.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BtnManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BtnManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CardDeck.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CardDeck.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Cards.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Cards.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Card 01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Card 01.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Card 02.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Card 02.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Card 03.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Card 03.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Card 04.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Card 04.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/card-01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/card-01.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/card-02.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/card-02.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/card-03.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/card-03.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/card-04.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/card-04.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/card-05.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/card-05.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/card-06.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/card-06.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Cards.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AICheck.cs.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +60,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "feature/revelation",
+    "git-widget-placeholder": "Merging feature/revelation",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -122,7 +123,7 @@
       <option name="presentableId" value="Default" />
       <updated>1719580965150</updated>
       <workItem from="1719580967672" duration="2962000" />
-      <workItem from="1719591523839" duration="17769000" />
+      <workItem from="1719591523839" duration="18207000" />
     </task>
     <servers />
   </component>

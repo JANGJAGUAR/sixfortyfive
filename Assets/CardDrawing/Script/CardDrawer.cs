@@ -51,7 +51,7 @@ public class CardDrawer : MonoBehaviour
             }
         }
     }
-    
+
 
     void DrawCards(int drawNum)
     {
@@ -61,20 +61,26 @@ public class CardDrawer : MonoBehaviour
             {
                 //Refill
             }
-            
+
             var randIdx = Random.Range(0, _unusedCards.Count);
             var card = _unusedCards[randIdx];
-            
+
             card.gameObject.SetActive(true);
             card.transform.SetParent(hand.transform, false);
-            
+
             card.transform.localPosition = Vector3.zero;
             card.transform.localRotation = Quaternion.identity;
-            
+
             hand.HandArrange();
-            
+
             _unusedCards.RemoveAt(randIdx);
             _handCards.Add(card);
+            if (Input.GetKeyDown(drawingKey))
+            {
+
+                Instantiate(card, hand.transform);
+                hand.GetComponent<PlayerHand>().HandArrange();
+            }
         }
     }
 

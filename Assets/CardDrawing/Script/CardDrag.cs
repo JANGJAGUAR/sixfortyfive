@@ -94,10 +94,12 @@ public class CardDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
             if (cardScript.cardSo.type == CardType.Numeric)
             {
                 transform.SetParent(Table1.transform);
+                // transform.localPosition = Vector3.zero;
             }
             else if(cardScript.cardSo.type==CardType.Logical)
             {
                 transform.SetParent(Table2.transform);
+                // transform.localPosition = Vector3.zero;
             }
             cardScript.UseCard();
             // 카드 
