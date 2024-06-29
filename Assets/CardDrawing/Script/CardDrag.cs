@@ -43,12 +43,12 @@ public class CardDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
     // private void OnMouseEnter()
     // {
     //     startPosition = transform.position;
-    //     StartCoroutine(MouseOnCard());
+    //     transform.position += Vector3.up * 15.0f; 
     // }
     //
     // private void OnMouseExit()
     // {
-    //     StopCoroutine(MouseOnCard());
+    //     
     //     transform.position = startPosition;
     // }
 
@@ -135,20 +135,5 @@ public class CardDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
         transform.position = endPossition;
         // 여기서 이벤트를 부를까 -> table의 bool값을 수정?
     }
-
-    // IEnumerator MouseOnCard()
-    // {
-    //     Vector3 endPosition = startPosition + Vector3.up * 10.0f;
-    //
-    //     float elapsedTime = 0.0f;
-    //
-    //     while (elapsedTime < 0.5f)
-    //     {
-    //         transform.position = Vector3.MoveTowards(transform.position, endPosition, 100.0f);
-    //         elapsedTime += Time.deltaTime;
-    //
-    //         yield return null;
-    //     }
-    // }
 
 }
