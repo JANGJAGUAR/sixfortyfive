@@ -6,10 +6,6 @@
   <component name="ChangeListManager">
 
     <list default="true" id="7e538f2d-6f4a-45a5-9f75-8728d002b00d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.sixfortyfive/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.sixfortyfive/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CardDrawing/Script/CardDrag.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CardDrawing/Script/CardDrag.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CardDrawing/Script/CardDrawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CardDrawing/Script/CardDrawer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RevelationScripts/LogicalRevelation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RevelationScripts/LogicalRevelation.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/RevelationScripts/NumericRevelation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RevelationScripts/NumericRevelation.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/RevelationScripts/RevelationGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RevelationScripts/RevelationGenerator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
@@ -116,8 +112,6 @@
       <updated>1719580965150</updated>
       <workItem from="1719580967672" duration="2962000" />
       <workItem from="1719648337964" duration="205000" />
-      <workItem from="1719648566706" duration="4580000" />
-
     </task>
     <servers />
   </component>

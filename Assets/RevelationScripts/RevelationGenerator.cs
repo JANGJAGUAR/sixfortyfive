@@ -36,7 +36,6 @@ public class RevelationGenerator : MonoBehaviour
         {
             answerSheet.Add(i);
         }
-
         numericPart = 0;
         _latestOperator = Operator.None;
     }
@@ -159,7 +158,6 @@ public class RevelationGenerator : MonoBehaviour
                     case Operator.None:
                     case Operator.Plus:
                         numericPart += number;
-                        
                         break;
                     case Operator.Minus:
                         numericPart -= number;
