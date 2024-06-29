@@ -2,11 +2,11 @@
 {
     public enum Logic
     {
-        NONE,
-         NOT,
-         GREATER,
-         LESS,
-         MULTIPLEOF,
-         DIVISIONOF,
+        None,
+        Not,
+        Greater,
+        Less, 
+        MultipleOf,
+        DivisionOf,
     }
 }

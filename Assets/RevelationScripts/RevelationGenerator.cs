@@ -11,7 +11,7 @@ using UnityEngine.Events;
 
 public class RevelationGenerator : MonoBehaviour
 {
-    private Operator _latestOperator = Operator.NONE;
+    private Operator _latestOperator = Operator.None;
     public UnityEvent<List<int>> onUpdateAnswerSheet;
     public List<int> answerSheet = new List<int>();
     public int numericPart;
@@ -36,6 +36,9 @@ public class RevelationGenerator : MonoBehaviour
         {
             answerSheet.Add(i);
         }
+
+        numericPart = 0;
+        _latestOperator = Operator.None;
     }
 
     void GreaterThan()
@@ -153,49 +156,59 @@ public class RevelationGenerator : MonoBehaviour
             case CardType.Numeric:
                 switch (_latestOperator)
                 {
-                    case Operator.NONE:
-                        numericPart = number;
+                    case Operator.None:
+                    case Operator.Plus:
+                            numericPart += number;
                         break;
-                    case Operator.PLUS:
-                        numericPart += number;
-                        break;
-                    case Operator.MINUS:
+                    case Operator.Minus:
                         numericPart -= number;
                         break;
-                    case Operator.MULITPLY:
+                    case Operator.Multiply:
                         numericPart *= number;
                         break;
-                    case Operator.DIVIDE:
+                    case Operator.Divide:
                         numericPart /= number;
                         break;
                 }
+
+                _latestOperator = Operator.None;
                 break;
             case CardType.Operator:
+                if (_latestOperator != Operator.None) return;
+                
                 _latestOperator = op;
+                
                 break;
             case CardType.Logical:
                 switch (logic)
                 {
-                    case Logic.NOT:
+                    case Logic.Not:
                         Not();
                         break;
-                    case Logic.LESS:
+                    case Logic.Less:
                         LessThan();
                         break;
-                    case Logic.GREATER:
+                    case Logic.Greater:
                         GreaterThan();
                         break;
-                    case Logic.MULTIPLEOF:
+                    case Logic.MultipleOf:
                         MultipleOf();
                         break;
-                    case Logic.DIVISIONOF:
+                    case Logic.DivisionOf:
                         DivisorOf();
                         break;
                 }
                 break;
         }
         
-        RevelationEventBus.Publish(RevelationEventType.APPLYCARDEFFECT, numericPart, logic.ToString());
+        RevelationEventBus.Publish(RevelationEventType.ApplyCardEffect, numericPart, _latestOperator.ToString(), logic.ToString());
         onUpdateAnswerSheet.Invoke(answerSheet);
+    }
+
+    public void PublishRevelation()
+    {
+        ReInitializeAnswerSheet();
+        onUpdateAnswerSheet.Invoke(answerSheet);
+        RevelationEventBus.Publish(RevelationEventType.PublishRevelation, numericPart, _latestOperator.ToString(), "None");
     }
 }

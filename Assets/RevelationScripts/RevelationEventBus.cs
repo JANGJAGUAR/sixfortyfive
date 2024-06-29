@@ -6,12 +6,12 @@ namespace RevelationScripts
 {
     public static class RevelationEventBus
     {
-        private static readonly IDictionary<RevelationEventType, UnityEvent<int, string>> RevelationEvents =
-            new Dictionary<RevelationEventType, UnityEvent<int, string>>();
+        private static readonly IDictionary<RevelationEventType, UnityEvent<int, string, string>> RevelationEvents =
+            new Dictionary<RevelationEventType, UnityEvent<int, string, string>>();
         
-        public static void Subscribe(RevelationEventType eventType, UnityAction<int, string> listener)
+        public static void Subscribe(RevelationEventType eventType, UnityAction<int, string, string> listener)
         {
-            UnityEvent<int, string> thisEvent;
+            UnityEvent<int, string, string> thisEvent;
 
             if (RevelationEvents.TryGetValue(eventType, out thisEvent))
             {
@@ -19,19 +19,19 @@ namespace RevelationScripts
             }
             else
             {
-                thisEvent = new UnityEvent<int, string>();
+                thisEvent = new UnityEvent<int, string, string>();
                 thisEvent.AddListener(listener);
                 RevelationEvents.Add(eventType, thisEvent);
             }
         }
 
-        public static void Publish(RevelationEventType eventType, int numericPart, string logicalPart)
+        public static void Publish(RevelationEventType eventType, int numericPart, string opPart, string logicalPart)
         {
-            UnityEvent<int, string> thisEvent;
+            UnityEvent<int, string, string> thisEvent;
 
             if (RevelationEvents.TryGetValue(eventType, out thisEvent))
             {
-                thisEvent.Invoke(numericPart, logicalPart);
+                thisEvent.Invoke(numericPart, opPart, logicalPart);
             }
         }
     }

@@ -8,15 +8,16 @@ public class LogicalRevelation : MonoBehaviour
 
     private void Start()
     {
-        _text = transform.GetChild(0).GetComponent<TextMeshProUGUI>();
-        _text.text = "Logical";
+        _text = gameObject.GetComponent<TextMeshProUGUI>();
+        _text.text = "";
         
-        RevelationEventBus.Subscribe(RevelationEventType.APPLYCARDEFFECT, UpdateLogicalPart);
+        RevelationEventBus.Subscribe(RevelationEventType.ApplyCardEffect, UpdateLogicalPart);
+        RevelationEventBus.Subscribe(RevelationEventType.PublishRevelation, UpdateLogicalPart);
     }
 
-    void UpdateLogicalPart(int numeric, string str)
+    void UpdateLogicalPart(int numeric, string opStr, string logicStr)
     {
-        _text.text = str;
+        _text.text = logicStr;
     }
     
     

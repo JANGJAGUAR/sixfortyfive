@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerHand : MonoBehaviour
 {
+    public float spacing = 1.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -11,8 +12,12 @@ public class PlayerHand : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void HandArrange()
     {
-        
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            Transform child = transform.GetChild(i);
+            child.localPosition = new Vector3(child.localPosition.x, child.localPosition.y, transform.childCount - (i * spacing));
+        }
     }
 }

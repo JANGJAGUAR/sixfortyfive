@@ -648,7 +648,6 @@ MonoBehaviour:
   handCards: []
   maxCardNumber: 30
   handCardNumber: 10
-  spacing: 1
 --- !u!1 &941344593
 GameObject:
   m_ObjectHideFlags: 0
@@ -929,12 +928,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardPrefabs:
-  - {fileID: 2201585049683710493, guid: d040032a05340144c980976f48b980fc, type: 3}
-  - {fileID: 2201585049683710493, guid: b07849e1447ab4f4396cc4f0786e5929, type: 3}
-  - {fileID: 2201585049683710493, guid: 0170d507b9c74c2478c713b7e5f34c38, type: 3}
-  - {fileID: 2201585049683710493, guid: 2231ac7ad75eab24ba2dd1959d306e2b, type: 3}
-  - {fileID: 2201585049683710493, guid: 689d9e39a793a0843815a58bc6cf9c6e, type: 3}
-  - {fileID: 2201585049683710493, guid: 63514b2286c0bf94fbfaf70ee0472460, type: 3}
   - {fileID: 2201585049683710493, guid: 412dbdc5b0b7126439777d75ee574947, type: 3}
   - {fileID: 2201585049683710493, guid: a20a8a6447f7fa648b8c026cf6bee7d9, type: 3}
   - {fileID: 2201585049683710493, guid: 18c69890f1349634d9457dc252bb22d7, type: 3}
