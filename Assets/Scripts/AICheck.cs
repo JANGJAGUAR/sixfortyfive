@@ -27,6 +27,7 @@ public class AICheck : MonoBehaviour
     private List<int> _numberList;
     public int nowTurn;
     public int rank;
+    public int score;
 
 
     //화면의 aiball 오브젝트 리스트
@@ -155,6 +156,7 @@ public class AICheck : MonoBehaviour
     public int Result(List<int> chooseBallList, List<int> answerBallList)
     {
         rank = 0;
+        score = 0;
         
         // 맞은 개수 체크
         int cnt = 0;
@@ -183,6 +185,8 @@ public class AICheck : MonoBehaviour
                 {
                     GameManager.Instance.isClear = true;
                     rank = 2;
+                    score = 55000000;
+
                 }
             }
             
@@ -192,24 +196,28 @@ public class AICheck : MonoBehaviour
         {
             GameManager.Instance.isClear = true;
             rank = 1;
+            score = 2000000000;
         }
 
         if (cnt == 5)
         {
             GameManager.Instance.isClear = true;
             rank = 3;
+            score = 1500000;
         }
 
         if (cnt == 4)
         {
             GameManager.Instance.isClear = true;
             rank = 4;
+            score = 50000;
         }
 
         if (cnt == 3)
         {
             GameManager.Instance.isClear = true;
             rank = 5;
+            score = 5000;
         }
 
         if (cnt == 2 || cnt == 1 || cnt == 0)
@@ -217,16 +225,17 @@ public class AICheck : MonoBehaviour
             GameManager.Instance.isClear = false;
         }
         
-        MoneyManager.Instance.AddMoney(rank);
-        Debug.Log("여기까지 음?");
-        StartCoroutine(PrintResult(rank));
+        GameManager.Instance.AddScore(score);
+        StartCoroutine(PrintResult(rank, score));
 
         return 0;
     }
 
     public GameObject rankResult;
     public TMP_Text resultText;
-    IEnumerator PrintResult(int rank)
+    public TMP_Text scoreText;
+    
+    IEnumerator PrintResult(int rank, int score)
     {
         // 빰빰빰
         float waitingTime = 0.0f;
@@ -238,14 +247,14 @@ public class AICheck : MonoBehaviour
         }
         
         rankResult.SetActive(true);
-        resultText.text = rank.ToString() + "위";
-
-        Debug.Log("VAR");
+        resultText.text = "결과 : " + rank.ToString() + "위";
+        scoreText.text = "+ " + score.ToString() + " 점";
         
         if (rank == 0)
         {
             resultText.color = Color.red;
-            resultText.text = "꼴등";
+            resultText.text = "결과 : 꼴등";
+            scoreText.color = Color.red;
         }
 
         waitingTime = 0;

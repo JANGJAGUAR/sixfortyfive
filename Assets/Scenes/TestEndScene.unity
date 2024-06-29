@@ -1054,7 +1054,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 0}
-  sceneName: MainMenu
+  sceneName: MainScene_Edit
   reset: 0
 --- !u!114 &1642396145
 MonoBehaviour:

@@ -31,8 +31,7 @@ public class EndObject : MonoBehaviour
 
     public void DefeatGame()
     {
-        // TODO: 검은 배경 -> 빨간 글씨
-        // 문구 추가
+        
         continueButton.transform.GetChild(0).GetComponent<TMP_Text>().text = "다시하기";
         continueButton.GetComponent<SceneChangeBtn>().reset = true;
         endMessage.text = "신도를 잃었습니다.";
@@ -44,7 +43,6 @@ public class EndObject : MonoBehaviour
     
     public void VictoryGame()
     {
-        // TODO : 금색 글씨
         endMessage.text = "숭배하라";
         endMessage.fontSize = 150;
         finalScore.text = "Score : " + GameManager.Instance.finalScore;
