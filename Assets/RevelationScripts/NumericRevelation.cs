@@ -14,7 +14,6 @@ public class NumericRevelation : MonoBehaviour
     private void Start()
     {
         _text = gameObject.GetComponent<TextMeshProUGUI>();
-        //_text = gameObject.GetComponent<TextMeshProUGUI>();
         _text.text = "";
         
         RevelationEventBus.Subscribe(RevelationEventType.ApplyCardEffect, ChangeNumericPart);
@@ -28,6 +27,7 @@ public class NumericRevelation : MonoBehaviour
 
     void ChangeNumericPart(int numericPart, string opStr, string logiStr)
     {
+        Debug.Log($"ChangeNumericPart invoked. numericPart: {numericPart}");
         string op = "";
         switch (opStr)
         {

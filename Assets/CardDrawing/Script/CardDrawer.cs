@@ -111,7 +111,6 @@ public class CardDrawer : MonoBehaviour
 
     void ReShakeCards()
     {
-        Debug.Log("ReShakeCards!");
         for (int i = _usedCards.Count - 1; i >= 0; i--)
         {
             var card = _usedCards[i];
