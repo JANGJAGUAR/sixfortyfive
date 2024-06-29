@@ -53,6 +53,11 @@ public class CardDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
     //     transform.position = startPosition;
     // }
 
+    public void ReInitialize()
+    {
+        _draggable = true;
+    }
+
     public void OnDrag(PointerEventData eventData)
     {
         // 드래그 중
@@ -91,7 +96,7 @@ public class CardDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
         // 드롭 후 일정 y 좌표 이상일시, 카드 종류에 따라 table에 내려놓음
         if (transform.position.y >= 450)
         {
-            if (cardScript.cardSo.type == CardType.Numeric)
+            if (cardScript.cardSo.type is CardType.Numeric or CardType.Operator)
             {
                 transform.SetParent(Table1.transform);
                 // transform.localPosition = Vector3.zero;
@@ -136,8 +141,6 @@ public class CardDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
     
         transform.position = endPossition;
         // 여기서 이벤트를 부를까 -> table의 bool값을 수정?
-        
-        
     }
 
     // IEnumerator MouseOnCard()

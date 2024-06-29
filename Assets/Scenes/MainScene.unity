@@ -205,9 +205,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1461777268}
-        m_TargetAssemblyTypeName: RevelationGenerator, Assembly-CSharp
-        m_MethodName: PublishRevelation
+      - m_Target: {fileID: 1194844785}
+        m_TargetAssemblyTypeName: CardDrawer, Assembly-CSharp
+        m_MethodName: RefillCard
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1194844785}
+        m_TargetAssemblyTypeName: CardDrawer, Assembly-CSharp
+        m_MethodName: ReturnCards
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -648,7 +660,7 @@ MonoBehaviour:
   handCards: []
   maxCardNumber: 30
   handCardNumber: 10
-
+  spacing: 1
 --- !u!1 &941344593
 GameObject:
   m_ObjectHideFlags: 0
@@ -929,14 +941,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardPrefabs:
-
   - {fileID: 2201585049683710493, guid: 412dbdc5b0b7126439777d75ee574947, type: 3}
   - {fileID: 2201585049683710493, guid: a20a8a6447f7fa648b8c026cf6bee7d9, type: 3}
   - {fileID: 2201585049683710493, guid: 18c69890f1349634d9457dc252bb22d7, type: 3}
   - {fileID: 2201585049683710493, guid: 6887a5e928af2dd418487a216885f3b3, type: 3}
   - {fileID: 2201585049683710493, guid: 685e4c38eb0c1d0458852ae537865441, type: 3}
   - {fileID: 2201585049683710493, guid: 44a976af691143f4faee38bdd16eb293, type: 3}
-  card: {fileID: 2201585049683710493, guid: c26df87a112a541dd86059f05e05307e, type: 3}
+  numericCards: {fileID: 0}
+  logicalCards: {fileID: 0}
+  card: {fileID: 0}
   hand: {fileID: 754159514}
 --- !u!4 &1194844786
 Transform:

@@ -17,6 +17,11 @@ public class LogicalRevelation : MonoBehaviour
 
     void UpdateLogicalPart(int numeric, string opStr, string logicStr)
     {
+        if (logicStr.Equals("None"))
+        {
+            _text.text = "";
+            return;
+        }
         _text.text = logicStr;
     }
     

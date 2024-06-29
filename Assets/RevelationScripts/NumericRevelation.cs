@@ -28,15 +28,23 @@ public class NumericRevelation : MonoBehaviour
 
     void ChangeNumericPart(int numericPart, string opStr, string logiStr)
     {
-        
-        if (opStr.Equals("None"))
+        string op = "";
+        switch (opStr)
         {
-            _text.text = $"{numericPart}";    
+            case "None":
+            case "Plus":
+                break;
+            case "Minus":
+                op = "-";
+                break;
+            case "Multiply":
+                op = "x";
+                break;
+            case "Divide":
+                op = "\u00f7";
+                break;
         }
-        else
-        {
-            _text.text = $"{numericPart}"+opStr;
-        }
+        _text.text = $"{numericPart} "+op;
     }
     
     
