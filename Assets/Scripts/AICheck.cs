@@ -20,15 +20,16 @@ public class AICheck : MonoBehaviour
 
     private List<List<int>> test;
 
+    private List<int> _numberList;
     public int nowTurn;
 
 
     //화면의 aiball 오브젝트 리스트
     void Start()
     {
+        _numberList = new List<int>();
         nowTurn = 0;
         _chooseBallList = new List<int>();
-        
         //TODO: 지울 것
         test = new List<List<int>>();
         List<int> test1 = new List<int>();
@@ -56,16 +57,37 @@ public class AICheck : MonoBehaviour
 
     public void UpdateAvailableAnswerNumbers(List<int> answerSheet)
     {
-        
+        ResetNumberList();
         //퍼블리쉬 누를때마다 초기화?
-        test[nowTurn].Clear();
         foreach (var answer in answerSheet)
         {
-            test[nowTurn].Add(answer);
+            _numberList.Remove(answer);
+        }
+        foreach (var noAnswer in _numberList)
+        {
+            test[nowTurn].Remove(noAnswer);
+        }
+
+        // TODO: 확률 출력 (기왕이면 화면에)
+        if (test[nowTurn].Count != 0)
+        {
+            Debug.Log("1/");
+            Debug.Log(test[nowTurn].Count);
+        }
+        else
+        {
+            Debug.Log("1/45");
         }
         
-        Debug.Log(test[nowTurn].Count);
-        
+    }
+
+    void ResetNumberList()
+    {
+        _numberList.Clear();
+        for (int i = 1; i <= 45; i++)
+        {
+            _numberList.Add(i);
+        }
     }
 
     public int ChooseOne(List<int> predictList, List<int> chooseBalList)

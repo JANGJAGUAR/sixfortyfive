@@ -551,7 +551,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 0}
-  sceneName: TestEndScene
+  sceneName: MainScene_Edit
 --- !u!1 &890876270
 GameObject:
   m_ObjectHideFlags: 0
