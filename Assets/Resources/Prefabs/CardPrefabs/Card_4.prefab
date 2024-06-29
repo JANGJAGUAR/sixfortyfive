@@ -15,13 +15,13 @@ GameObject:
   - component: {fileID: 5129659553822698649}
   - component: {fileID: 4965312971987185993}
   - component: {fileID: 2054202706009606152}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Card_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2370351310820803828
 RectTransform:
   m_ObjectHideFlags: 0

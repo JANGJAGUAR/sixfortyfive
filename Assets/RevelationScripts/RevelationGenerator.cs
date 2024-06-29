@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using CardScripts;
 using Microsoft.Win32.SafeHandles;
 using RevelationScripts;
@@ -160,42 +161,38 @@ public class RevelationGenerator : MonoBehaviour
             case CardType.Logical:
                 switch (logic)
                 {
-                    case Logic.Equal:
-                        _lastestLogic = logic;
-                        break;
                     case Logic.Not:
-                        if (_lastestLogic != Logic.None)
+                        if (_lastestLogic == Logic.None)
                         {
-                            if (_lastestLogic==Logic.Equal)
-                            {
-                                _lastestLogic = Logic.Not;
-                            }
-
-                            if (_lastestLogic == Logic.Not)
-                            {
-                                _lastestLogic = Logic.Equal;
-                            }
-                            else if (_lastestLogic == Logic.Greater)
-                            {
-                                _lastestLogic = Logic.EqualOrLess;
-                            }
-                            else if (_lastestLogic == Logic.Less)
-                            {
-                                _lastestLogic = Logic.EqualOrGreater;
-                            }
-                            else if (_lastestLogic == Logic.EqualOrLess)
-                            {
-                                _lastestLogic = Logic.Greater;
-                            }
-                            else if (_lastestLogic == Logic.EqualOrGreater)
-                            {
-                                _lastestLogic = Logic.Less;
-                            }
+                            _lastestLogic = Logic.Not;
                         }
-                        else
+                        else if (_lastestLogic == Logic.Not)
                         {
-                            _lastestLogic = logic;
+                            _lastestLogic = Logic.Not;
                         }
+                        else if (_lastestLogic==Logic.Equal)
+                        {
+                            _lastestLogic = Logic.Not;
+                        }
+                        else if (_lastestLogic == Logic.Greater)
+                        {
+                            _lastestLogic = Logic.EqualOrLess;
+                        }
+                        else if (_lastestLogic == Logic.Less)
+                        {
+                            _lastestLogic = Logic.EqualOrGreater;
+                        }
+                        else if (_lastestLogic == Logic.EqualOrLess)
+                        {
+                            _lastestLogic = Logic.Greater;
+                        }
+                        else if (_lastestLogic == Logic.EqualOrGreater)
+                        {
+                            _lastestLogic = Logic.Less;
+                        }
+                        break;
+                    case Logic.Equal:
+                        _lastestLogic = Logic.Equal;
                         break;
                     case Logic.Less:
                         _lastestLogic = logic;
@@ -212,7 +209,6 @@ public class RevelationGenerator : MonoBehaviour
                 }
                 break;
         }
-        
         RevelationEventBus.Publish(RevelationEventType.ApplyCardEffect, numericPart, _latestOperator.ToString(), _lastestLogic.ToString());
         ReWriteAnswerSheet();
         onUpdateAnswerSheet.Invoke(answerSheet);
@@ -293,4 +289,6 @@ public class RevelationGenerator : MonoBehaviour
         onUpdateAnswerSheet.Invoke(answerSheet);
         RevelationEventBus.Publish(RevelationEventType.PublishRevelation, numericPart, _latestOperator.ToString(), _lastestLogic.ToString());
     }
+    
+    
 }

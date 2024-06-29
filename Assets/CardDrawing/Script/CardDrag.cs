@@ -26,13 +26,13 @@ public class CardDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
     public GameObject Table1;
     public GameObject Table2;
     
+    
     // Start is called before the first frame update
     void Start()
     {
-        cardScript = GetComponent<CardScript>();
-        
         Table1 = GameObject.Find("Numeric");
         Table2 = GameObject.Find("Logical");
+        cardScript = gameObject.GetComponent<CardScript>();
     }
 
     // Update is called once per frame
@@ -40,18 +40,6 @@ public class CardDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
     {
         
     }
-
-    // private void OnMouseEnter()
-    // {
-    //     startPosition = transform.position;
-    //     StartCoroutine(MouseOnCard());
-    // }
-    //
-    // private void OnMouseExit()
-    // {
-    //     StopCoroutine(MouseOnCard());
-    //     transform.position = startPosition;
-    // }
 
     public void ReInitialize()
     {
@@ -64,7 +52,8 @@ public class CardDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
         // 마우스 좌표 & 실제 좌표 계산
         mousePosition = eventData.position;
         worldPosition = Camera.main.ScreenToWorldPoint(mousePosition + new Vector3(0, 0, 9.0f));
-
+        worldPosition.z = 10.0f;
+        
         if (_draggable)
         {
             // 드래그 시 오브젝트가 마우스 따라다님
@@ -78,8 +67,6 @@ public class CardDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
         
         // 시작 position 저장
         startPosition = transform.position;
-        
-
     }
     
     public void OnEndDrag(PointerEventData eventData)
@@ -129,9 +116,10 @@ public class CardDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
         float elapsedTime = 0.0f;
     
         // 2초 동안 table로 움직임
-        while (elapsedTime < 2.5f)
+        while (elapsedTime < 1.0f)
         {
             transform.position = Vector3.MoveTowards(transform.position, endPossition, 150.0f + 20 * elapsedTime );
+            if (transform.position == endPossition) break;
             // transform.rotation = Quaternion.Lerp(transform.rotation, randomAngle, Time.deltaTime * 2.0f);
         
             elapsedTime += Time.deltaTime;
@@ -140,6 +128,7 @@ public class CardDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
         }
     
         transform.position = endPossition;
+        gameObject.SetActive(false);
         // 여기서 이벤트를 부를까 -> table의 bool값을 수정?
     }
 
