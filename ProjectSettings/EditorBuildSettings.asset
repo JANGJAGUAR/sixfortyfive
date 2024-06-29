@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainScene_Copy.unity
     guid: db273f47c508c4fafab51affb371481d
+  - enabled: 1
+    path: Assets/Scenes/StoryHowTo.unity
+    guid: 93c1ef5a341e84dab953e5b345492013
   m_configObjects: {}

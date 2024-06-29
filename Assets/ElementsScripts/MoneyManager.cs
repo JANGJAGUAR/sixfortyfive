@@ -36,38 +36,40 @@ public class MoneyManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    
+    
 
     // 해제하여 사용
     // 등수를 인자로 받아요
-    public void AddMoney(int rank)
-    {
-        // 등수에 따른 차등 보상, 수치 변경 가능
-        if (rank == 1)
-        {
-            CreateDeltaText(0, 1000);
-        }
-        else if (rank == 2)
-        {
-            CreateDeltaText(0, 500);
-        }
-        else if (rank == 3)
-        {
-            CreateDeltaText(0, 300);
-        }
-        else if (rank == 4)
-        {
-            CreateDeltaText(0, 100);
-        }
-        else if (rank == 5)
-        {
-            CreateDeltaText(0, 10);
-        }
-        else
-        {
-            return;
-        }
-    
-    }
+    // public void AddMoney(int rank)
+    // {
+    //     // 등수에 따른 차등 보상, 수치 변경 가능
+    //     if (rank == 1)
+    //     {
+    //         CreateDeltaText(0, 1000);
+    //     }
+    //     else if (rank == 2)
+    //     {
+    //         CreateDeltaText(0, 500);
+    //     }
+    //     else if (rank == 3)
+    //     {
+    //         CreateDeltaText(0, 300);
+    //     }
+    //     else if (rank == 4)
+    //     {
+    //         CreateDeltaText(0, 100);
+    //     }
+    //     else if (rank == 5)
+    //     {
+    //         CreateDeltaText(0, 10);
+    //     }
+    //     else
+    //     {
+    //         return;
+    //     }
+    //
+    // }
 
     public void CreateDeltaText(int type, float delta)
     {

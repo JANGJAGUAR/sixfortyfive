@@ -10,7 +10,15 @@ public class GameManager : MonoBehaviour
     public bool isClear = false;
 
     public string sceneName = "MainMenu";
-    
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Dollar))
+        {
+            AddScore(10);
+        }
+    }
+
     // instance
     public static GameManager Instance;
 
@@ -34,6 +42,11 @@ public class GameManager : MonoBehaviour
         sceneName = name;
         SceneManager.LoadScene("LoadingScene");
 
+    }
+
+    public void AddScore(int score)
+    {
+        finalScore += score;
     }
 
 }

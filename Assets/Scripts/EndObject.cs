@@ -11,16 +11,14 @@ public class EndObject : MonoBehaviour
     public TMP_Text endMessage;
     public TMP_Text finalScore;
 
-    public GameObject continueButton;
+    public CanvasGroup canvasGroup;
 
-    private void Update()
-    {
-        
-    }
+    public GameObject continueButton;
 
     private void Awake()
     {
-        endMessage.fontMaterial.SetFloat(ShaderUtilities.ID_FaceDilate, -1.0f);
+        canvasGroup = GetComponent<CanvasGroup>();
+
         if (GameManager.Instance.isClear)
         {
             VictoryGame();
@@ -35,10 +33,12 @@ public class EndObject : MonoBehaviour
     {
         // TODO: 검은 배경 -> 빨간 글씨
         // 문구 추가
-        continueButton.GetComponent<Button>().interactable = false;
-        endMessage.text = "신";
+        continueButton.transform.GetChild(0).GetComponent<TMP_Text>().text = "다시하기";
+        continueButton.GetComponent<SceneChangeBtn>().reset = true;
+        endMessage.text = "신도를 잃었습니다.";
+        endMessage.fontSize = 120;
         finalScore.text = "Score : " + GameManager.Instance.finalScore;
-        endMessage.color = Color.red;
+        endMessage.color = new Color32(202, 0 ,12, 255);
         StartCoroutine(TextChange());
     }
     
@@ -46,6 +46,7 @@ public class EndObject : MonoBehaviour
     {
         // TODO : 금색 글씨
         endMessage.text = "숭배하라";
+        endMessage.fontSize = 150;
         finalScore.text = "Score : " + GameManager.Instance.finalScore;
         endMessage.color = Color.yellow;
         StartCoroutine(TextChange());
@@ -55,23 +56,23 @@ public class EndObject : MonoBehaviour
     {
         float elapsedTime = 0.0f;
 
-        while (elapsedTime <= 0.5f)
+        while (elapsedTime <= 0.8f)
         {
-            endMessage.fontMaterial.SetFloat(ShaderUtilities.ID_FaceDilate, -1 + 2 * (elapsedTime / 0.5f));
+            canvasGroup.alpha = elapsedTime / 0.8f;
             elapsedTime += Time.deltaTime;
 
             yield return null;
         }
-
-        elapsedTime = 0;
-        
-        while (elapsedTime <= 0.3f)
-        {
-            endMessage.fontMaterial.SetFloat(ShaderUtilities.ID_FaceDilate, 1 - (elapsedTime / 0.3f));
-            elapsedTime += Time.deltaTime;
-
-            yield return null;
-        }
+        //
+        // elapsedTime = 0;
+        //
+        // while (elapsedTime <= 0.3f)
+        // {
+        //     endMessage.fontMaterial.SetFloat(ShaderUtilities.ID_FaceDilate, 1 - (elapsedTime / 0.3f));
+        //     elapsedTime += Time.deltaTime;
+        //
+        //     yield return null;
+        // }
 
     }
 }
