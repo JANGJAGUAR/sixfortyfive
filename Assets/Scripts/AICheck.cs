@@ -9,6 +9,7 @@ public class AICheck : MonoBehaviour
     [SerializeField]
     private List<GameObject> aiBalls;
     
+
     [SerializeField]
     private GameObject aiTexts;
 
@@ -19,14 +20,16 @@ public class AICheck : MonoBehaviour
 
     private List<List<int>> test;
 
+    private List<int> _numberList;
     public int nowTurn;
+
 
     //화면의 aiball 오브젝트 리스트
     void Start()
     {
+        _numberList = new List<int>();
         nowTurn = 0;
         _chooseBallList = new List<int>();
-        
         //TODO: 지울 것
         test = new List<List<int>>();
         List<int> test1 = new List<int>();
@@ -54,16 +57,37 @@ public class AICheck : MonoBehaviour
 
     public void UpdateAvailableAnswerNumbers(List<int> answerSheet)
     {
-        
+        ResetNumberList();
         //퍼블리쉬 누를때마다 초기화?
-        test[nowTurn].Clear();
         foreach (var answer in answerSheet)
         {
-            test[nowTurn].Add(answer);
+            _numberList.Remove(answer);
+        }
+        foreach (var noAnswer in _numberList)
+        {
+            test[nowTurn].Remove(noAnswer);
+        }
+
+        // TODO: 확률 출력 (기왕이면 화면에)
+        if (test[nowTurn].Count != 0)
+        {
+            Debug.Log("1/");
+            Debug.Log(test[nowTurn].Count);
+        }
+        else
+        {
+            Debug.Log("1/45");
         }
         
-        Debug.Log(test[nowTurn].Count);
-        
+    }
+
+    void ResetNumberList()
+    {
+        _numberList.Clear();
+        for (int i = 1; i <= 45; i++)
+        {
+            _numberList.Add(i);
+        }
     }
 
     public int ChooseOne(List<int> predictList, List<int> chooseBalList)
@@ -83,6 +107,17 @@ public class AICheck : MonoBehaviour
             return i;
         }
 
+        // 리스트에 아무것도 없을 때
+        List<int> zeroCount = new List<int>();
+        for (int i = 1; i <= 45; i++)
+        {
+            zeroCount.Add(i);
+        }
+        var randomNumber = zeroCount.OrderBy(x => random.Next());
+        foreach (var i in randomNumber)
+        {
+            return i;
+        }
         return 0;
     }
 
@@ -95,13 +130,6 @@ public class AICheck : MonoBehaviour
         
         
         nowTurn = 0;
-        //TODO: 지울 것
-        // test[.Add(3);
-        // test1.Add(3); test1.Add(4);
-        // test2.Add(3); test2.Add(4); test2.Add(1);
-        // test3.Add(3); test3.Add(4); test3.Add(1); test3.Add(2);
-        // test4.Add(3); test4.Add(4); test4.Add(1); test4.Add(2); test4.Add(5); 
-        // test5.Add(3); test5.Add(4); test5.Add(1); test5.Add(2); test5.Add(5); 
         
         
         
@@ -129,7 +157,7 @@ public class AICheck : MonoBehaviour
     public int Result(List<int> chooseBallList, List<int> answerBallList)
     {
         
-
+        // 맞은 개수 체크
         int cnt = 0;
         for (int i = 0; i < 6; i++)
         {
@@ -144,38 +172,49 @@ public class AICheck : MonoBehaviour
             
         }
 
+        // 순위가 있으면 클리어, 없으면 실패
+        // 순위에 따라 돈 추가
         if (cnt == 5)
         {
             for (int i = 0; i < 6; i++)
             {
+
                 if (answerBallList[6] == chooseBallList[i])
+
                 {
-                    return 2;
+                    GameManager.Instance.isClear = true;
+                    MoneyManager.Instance.AddMoney(2);
                 }
             }
             
         }
-
+        
         if (cnt == 6)
         {
-            return 1;
+            GameManager.Instance.isClear = true;
+            MoneyManager.Instance.AddMoney(1);
         }
 
         if (cnt == 5)
         {
-            return 3;
+            GameManager.Instance.isClear = true;
+            MoneyManager.Instance.AddMoney(3);
         }
 
         if (cnt == 4)
         {
-            return 4;
+            GameManager.Instance.isClear = true;
+            MoneyManager.Instance.AddMoney(4);
         }
 
         if (cnt == 3)
         {
-            return 5;
+            GameManager.Instance.isClear = true;
+            MoneyManager.Instance.AddMoney(5);
         }
-        return cnt+100;
+
+        GameManager.Instance.isClear = false;
+        return 0;
     }
 
     public void ResetCheck()
