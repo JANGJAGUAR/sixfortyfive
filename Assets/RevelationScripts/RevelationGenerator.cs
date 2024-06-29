@@ -287,6 +287,7 @@ public class RevelationGenerator : MonoBehaviour
 
     public void PublishRevelation()
     {
+        SoundManager.Instance.PlayerRevelationSound();
         aicheck.GetComponent<AICheck>().SetTest(answerSheet);
         ReInitializeAnswerSheet();
         onUpdateAnswerSheet.Invoke(answerSheet);

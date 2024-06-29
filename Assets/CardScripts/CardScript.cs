@@ -16,6 +16,7 @@ namespace CardScripts
         }
         public void UseCard()
         {
+            SoundManager.Instance.PlayCardUseSound();
             _cardDrawer.UseHandCard(this);
             CardEventBus.Publish(CardEventType.UseCard, cardSo.type, cardSo.number, cardSo.operation, cardSo.logic);
         }

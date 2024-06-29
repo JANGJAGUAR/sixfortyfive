@@ -122,6 +122,62 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &286748299
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 286748301}
+  - component: {fileID: 286748300}
+  m_Layer: 0
+  m_Name: Sound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &286748300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286748299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa08143851ddd714e8f705831f804990, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bgmAudioSource: {fileID: 0}
+  audioSources: []
+  introBgm: {fileID: 8300000, guid: 40a44041f1bcd0346999ea15f7c4c7c8, type: 3}
+  normalBgm: {fileID: 8300000, guid: ca0c9456ef2174a4896ca42e4c8acf1b, type: 3}
+  winBgm: {fileID: 8300000, guid: 98ad0fba11126144594ecf69f9f09234, type: 3}
+  loseBgm: {fileID: 8300000, guid: 6c5d6d892904c844fa58db98d2f91f5b, type: 3}
+  btnClickSoundEffect: {fileID: 8300000, guid: 574acdf76206009478ba21cd427bd6bc, type: 3}
+  typingSoundEffect: {fileID: 8300000, guid: 9a7caaaec575d1e4e9f081b4f4999dfe, type: 3}
+  chooseNextBallSoundEffect: {fileID: 8300000, guid: 3fefbc49c9bfbf448a075686f8d64527, type: 3}
+  shakeBallSoundEffect: {fileID: 8300000, guid: c5ae306a2e77ff14d8a00cee02539066, type: 3}
+  revelationSoundEffect: {fileID: 8300000, guid: cb0d89a605c7dce4882fa96b8cf0157c, type: 3}
+  cardUseSoundEffect: {fileID: 8300000, guid: 4fab7d17482832c4c81efcb56f258f1f, type: 3}
+--- !u!4 &286748301
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286748299}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 613, y: 347.8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &448818963
 GameObject:
   m_ObjectHideFlags: 0
@@ -468,7 +524,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -150}
+  m_AnchoredPosition: {x: 0, y: -187}
   m_SizeDelta: {x: 247.0514, y: 82.8983}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &814090798
@@ -1210,3 +1266,4 @@ SceneRoots:
   - {fileID: 643474555}
   - {fileID: 3693837591186228873}
   - {fileID: 1683115068}
+  - {fileID: 286748301}

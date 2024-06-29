@@ -21,10 +21,12 @@ public class EndObject : MonoBehaviour
 
         if (GameManager.Instance.isClear)
         {
+            SoundManager.Instance.PlayerWinBgm();
             VictoryGame();
         }
         else
         {
+            SoundManager.Instance.PlayLoseBgm();
             DefeatGame();
         }
     }

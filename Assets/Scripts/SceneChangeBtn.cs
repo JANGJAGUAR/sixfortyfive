@@ -22,6 +22,7 @@ public class SceneChangeBtn : MonoBehaviour
     // Update is called once per frame
     void OnButtonClick()
     {
+        SoundManager.Instance.PlayBtnClickSound();
         if (reset)
         {
             GameManager.Instance.finalScore = 0;

@@ -28,13 +28,20 @@ public class TurnManager : MonoBehaviour
     
     void Start()
     {
-        
+        SoundManager.Instance.PlayBGM();
         _selectOriginPosition = selectObject.transform.position;
         selectObject.SetActive(false);
         publishBtn.SetActive(false);
         nextTurnBtn.SetActive(false);
-        // StartTurn();
+        StartCoroutine(StartFunc());
+        
         //TODO: 씬 바뀌면 바로 시작
+    }
+
+    IEnumerator StartFunc()
+    {
+        yield return new WaitForSeconds(1.0f);
+        StartTurn();
     }
     
     void Update()
@@ -45,6 +52,11 @@ public class TurnManager : MonoBehaviour
     public void NextTurn()
     {
         Turn++;
+        if (Turn <=6)
+        {
+            SoundManager.Instance.PlayChooseNextBallSound();
+        }
+        
         aicheck.GetComponent<AICheck>().AiNextTurn();
         
         if (Turn > 6)
@@ -83,9 +95,15 @@ public class TurnManager : MonoBehaviour
     }
     
     IEnumerator WaitingBeliever()
-    {
-        yield return new WaitForSeconds(believerTime);
+    {   
+        
+        yield return new WaitForSeconds(believerTime*2/3);
+        SoundManager.Instance.PlayBallShakeSound();
+        yield return new WaitForSeconds(believerTime*1/3);
         balldeck.GetComponent<BallDeck>().BallShuffle();
+        
+        
+        
     }
 
     IEnumerator WaitingBall()
