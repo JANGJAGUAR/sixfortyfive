@@ -59,9 +59,9 @@ public class BallDeck : MonoBehaviour
             openNumber++;
         }
         
-        foreach (var i in openNumberList)
-        {
-            Debug.Log(i);
-        }
+        // foreach (var i in openNumberList)
+        // {
+        //     Debug.Log(i);
+        // }
     }
 }

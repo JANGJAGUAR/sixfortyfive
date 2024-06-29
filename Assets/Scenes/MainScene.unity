@@ -947,8 +947,7 @@ MonoBehaviour:
   - {fileID: 2201585049683710493, guid: 6887a5e928af2dd418487a216885f3b3, type: 3}
   - {fileID: 2201585049683710493, guid: 685e4c38eb0c1d0458852ae537865441, type: 3}
   - {fileID: 2201585049683710493, guid: 44a976af691143f4faee38bdd16eb293, type: 3}
-  numericCards: {fileID: 0}
-  logicalCards: {fileID: 0}
+
   card: {fileID: 0}
   hand: {fileID: 754159514}
 --- !u!4 &1194844786

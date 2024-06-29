@@ -9,12 +9,20 @@ public class TurnManager : MonoBehaviour
 
     
     [SerializeField] private GameObject selectObject;
+    [SerializeField] private GameObject tableObject;
+    
+    [SerializeField] private GameObject nextTurnBtn;
+    [SerializeField] private GameObject publishBtn;
+
+
+    [SerializeField] private float believerTime;
+    [SerializeField] private float ballWaitingTime;
+    
     private Vector3 _selectOriginPosition;
     [SerializeField] private float xMove;
 
-    [SerializeField] private GameObject _balldeck;
-
-    [SerializeField] private GameObject _aicheck;
+    [SerializeField] private GameObject balldeck;
+    [SerializeField] private GameObject aicheck;
     
     // private int we
     
@@ -23,6 +31,8 @@ public class TurnManager : MonoBehaviour
         
         _selectOriginPosition = selectObject.transform.position;
         selectObject.SetActive(false);
+        publishBtn.SetActive(false);
+        nextTurnBtn.SetActive(false);
         // StartTurn();
         //TODO: 씬 바뀌면 바로 시작
     }
@@ -35,10 +45,17 @@ public class TurnManager : MonoBehaviour
     public void NextTurn()
     {
         Turn++;
+        aicheck.GetComponent<AICheck>().nowTurn++;
+        
         if (Turn > 6)
         {
-            _aicheck.GetComponent<AICheck>().LastBallEnd();
+            aicheck.GetComponent<AICheck>().LastBallEnd();
+            
             selectObject.SetActive(false);
+            tableObject.SetActive(false);
+            publishBtn.SetActive(false);
+            nextTurnBtn.SetActive(false);
+            
         }
         
         selectObject.transform.position = _selectOriginPosition + new Vector3(xMove*(Turn-1), 0, 0);
@@ -47,19 +64,36 @@ public class TurnManager : MonoBehaviour
     public void ResetTurn()
     {
         Turn = 1;
-        _balldeck.GetComponent<BallDeck>().BallReset();
-        _aicheck.GetComponent<AICheck>().ResetCheck();
+        balldeck.GetComponent<BallDeck>().BallReset();
+        aicheck.GetComponent<AICheck>().ResetCheck();
+        tableObject.SetActive(true);
     }
 
     public void StartTurn()
     {
         ResetTurn();
+        
         //TODO: 신도 오는거 기다렸다가
+        StartCoroutine(WaitingBeliever());
         
-        _balldeck.GetComponent<BallDeck>().BallShuffle();
+        
         //TODO: 섞는거 끝나면 서클 띄우고 시작
+        StartCoroutine(WaitingBall());
         
+    }
+    
+    IEnumerator WaitingBeliever()
+    {
+        yield return new WaitForSeconds(believerTime);
+        balldeck.GetComponent<BallDeck>().BallShuffle();
+    }
+
+    IEnumerator WaitingBall()
+    {
+        yield return new WaitForSeconds(believerTime + ballWaitingTime);
         selectObject.SetActive(true);
+        publishBtn.SetActive(true);
+        nextTurnBtn.SetActive(true);
         selectObject.transform.position = _selectOriginPosition;
     }
 

@@ -17,31 +17,54 @@ public class AICheck : MonoBehaviour
     public GameObject answerBall;
     // private List<int> _answerBallList = new List<int>();
 
-    private List<int> test, test1, test2, test3, test4, test5;
+    private List<List<int>> test;
+
+    public int nowTurn;
 
     //화면의 aiball 오브젝트 리스트
     void Start()
     {
-        
+        nowTurn = 0;
         _chooseBallList = new List<int>();
         
         //TODO: 지울 것
-        test = new List<int>();
-        test1 = new List<int>();
-        test2 = new List<int>();
-        test3 = new List<int>();
-        test4 = new List<int>();
-        test5 = new List<int>();
+        test = new List<List<int>>();
+        List<int> test1 = new List<int>();
+        List<int> test2 = new List<int>();
+        List<int> test3 = new List<int>();
+        List<int> test4 = new List<int>();
+        List<int> test5 = new List<int>();
+        List<int> test6 = new List<int>();
+        
+        test.Add(test1);
+        test.Add(test2);
+        test.Add(test3);
+        test.Add(test4);
+        test.Add(test5);
+        test.Add(test6);
         ResetCheck();
         
     }
+    
 
     void Update()
     {
         
     }
-    
-    
+
+    public void UpdateAvailableAnswerNumbers(List<int> answerSheet)
+    {
+        
+        //퍼블리쉬 누를때마다 초기화?
+        test[nowTurn].Clear();
+        foreach (var answer in answerSheet)
+        {
+            test[nowTurn].Add(answer);
+        }
+        
+        Debug.Log(test[nowTurn].Count);
+        
+    }
 
     public int ChooseOne(List<int> predictList, List<int> chooseBalList)
     {
@@ -65,24 +88,29 @@ public class AICheck : MonoBehaviour
 
     public void LastBallEnd()
     {
+        for (int i = 0; i < 6; i++)
+        {
+            Debug.Log(test[i].Count);
+        }
+        
+        
+        nowTurn = 0;
         //TODO: 지울 것
-        test.Add(3);
-        test1.Add(3); test1.Add(4);
-        test2.Add(3); test2.Add(4); test2.Add(1);
-        test3.Add(3); test3.Add(4); test3.Add(1); test3.Add(2);
-        test4.Add(3); test4.Add(4); test4.Add(1); test4.Add(2); test4.Add(5); 
-        test5.Add(3); test5.Add(4); test5.Add(1); test5.Add(2); test5.Add(5); 
+        // test[.Add(3);
+        // test1.Add(3); test1.Add(4);
+        // test2.Add(3); test2.Add(4); test2.Add(1);
+        // test3.Add(3); test3.Add(4); test3.Add(1); test3.Add(2);
+        // test4.Add(3); test4.Add(4); test4.Add(1); test4.Add(2); test4.Add(5); 
+        // test5.Add(3); test5.Add(4); test5.Add(1); test5.Add(2); test5.Add(5); 
         
         
         
         aiTexts.SetActive(true);
-        
-        _chooseBallList.Add(ChooseOne(test, _chooseBallList));
-        _chooseBallList.Add(ChooseOne(test1, _chooseBallList));
-        _chooseBallList.Add(ChooseOne(test2, _chooseBallList));
-        _chooseBallList.Add(ChooseOne(test3, _chooseBallList));
-        _chooseBallList.Add(ChooseOne(test4, _chooseBallList));
-        _chooseBallList.Add(ChooseOne(test5, _chooseBallList));
+
+        for (int i = 0; i < 6; i++)
+        {
+            _chooseBallList.Add(ChooseOne(test[i], _chooseBallList));
+        }
         
         var openNumber = 0;
         foreach (var i in _chooseBallList)
@@ -97,7 +125,7 @@ public class AICheck : MonoBehaviour
         
         
     }
-
+    
     public int Result(List<int> chooseBallList, List<int> answerBallList)
     {
         
@@ -152,6 +180,7 @@ public class AICheck : MonoBehaviour
 
     public void ResetCheck()
     {
+        nowTurn = 0;
         //TODO: 리셋 관련
         aiTexts.SetActive(false);
         foreach (var ball in aiBalls)
@@ -162,11 +191,10 @@ public class AICheck : MonoBehaviour
         _chooseBallList.Clear();
         
         //TODO: 지울 것
-        test.Clear();
-        test1.Clear();
-        test2.Clear();
-        test3.Clear();
-        test4.Clear();
-        test5.Clear();
+        for (int i = 0; i < 6; i++)
+        {
+            test[i].Clear();
+        }
+        
     }
 }
