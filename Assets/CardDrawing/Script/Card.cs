@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class Card : MonoBehaviour
 {
-    private SpriteRenderer render;
-    
-    public int cardType = 0;
+    public int cardType;
     // Start is called before the first frame update
     void Start()
     {
-        render = GetComponent<SpriteRenderer>();
-
-        // render.color = new Color(Random.Range(0, 1.0f), Random.Range(0, 1.0f), Random.Range(0, 1.0f));
         cardType = Random.Range(0, 2);
     }
 
