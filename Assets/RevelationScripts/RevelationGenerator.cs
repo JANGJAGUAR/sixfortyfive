@@ -283,8 +283,11 @@ public class RevelationGenerator : MonoBehaviour
         }
     }
 
+    [SerializeField] private GameObject aicheck;
+
     public void PublishRevelation()
     {
+        aicheck.GetComponent<AICheck>().SetTest(answerSheet);
         ReInitializeAnswerSheet();
         onUpdateAnswerSheet.Invoke(answerSheet);
         RevelationEventBus.Publish(RevelationEventType.PublishRevelation, numericPart, _latestOperator.ToString(), _lastestLogic.ToString());
