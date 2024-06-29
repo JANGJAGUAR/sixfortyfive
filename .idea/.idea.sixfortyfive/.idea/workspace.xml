@@ -5,32 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e538f2d-6f4a-45a5-9f75-8728d002b00d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Prefebs/CardDummyMerge.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefebs/CardDummyMerge.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/TestCardDraw.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/shuffle_draw.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/shuffle_draw.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AICheck.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CardMoveMerge.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CardMoveMerge.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TurnManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TurnManager.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CardDrawing/Prefab/Card.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CardDrawing/Prefab/Card.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CardDrawing/Script/Card.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CardDrawing/Script/Card.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CardDrawing/Script/CardDrag.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CardDrawing/Script/CardDrag.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CardDrawing/Script/CardDrawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CardDrawing/Script/CardDrawer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefebs/BallDummy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefebs/BallDummy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestCardDrawing.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestCardDrawing.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestCardDraw.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BallDeck.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BallDeck.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Balls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Balls.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BtnManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BtnManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CardDeck.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CardDeck.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Cards.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Cards.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Cards.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AICheck.cs.meta" afterDir="false" />
+n
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,26 +31,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Merging feature/revelation",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
-  },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\wlssk\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\wlssk\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\wlssk\\AppData\\Local\\Symbols\\src"
-    ]
-  }
-}]]></component>
+
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.35f1\Editor\Unity.exe" />
@@ -123,7 +79,7 @@
       <option name="presentableId" value="Default" />
       <updated>1719580965150</updated>
       <workItem from="1719580967672" duration="2962000" />
-      <workItem from="1719591523839" duration="18207000" />
+
     </task>
     <servers />
   </component>

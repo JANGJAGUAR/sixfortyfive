@@ -648,6 +648,7 @@ MonoBehaviour:
   handCards: []
   maxCardNumber: 30
   handCardNumber: 10
+
 --- !u!1 &941344593
 GameObject:
   m_ObjectHideFlags: 0
@@ -928,6 +929,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardPrefabs:
+
   - {fileID: 2201585049683710493, guid: 412dbdc5b0b7126439777d75ee574947, type: 3}
   - {fileID: 2201585049683710493, guid: a20a8a6447f7fa648b8c026cf6bee7d9, type: 3}
   - {fileID: 2201585049683710493, guid: 18c69890f1349634d9457dc252bb22d7, type: 3}

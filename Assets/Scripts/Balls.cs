@@ -33,19 +33,33 @@ public class Balls : MonoBehaviour
         {
             yield return new WaitForSeconds(0.2f);
         }
-        for(int i=1; i<=45; i++)
+
+        if (_ballNumber == 0)
         {
-            if (i + _ballNumber > 45)
+            for(int i=1; i<45; i++)
             {
-                ballText.text = ((_ballNumber + i) - 45).ToString();
+                ballText.text = ((_ballNumber + i)).ToString();
+                yield return new WaitForSeconds(0.04f);
             }
-            else
-            {
-                ballText.text = (_ballNumber + i).ToString();
-            }
-            
-            yield return new WaitForSeconds(0.04f);
+            ballText.text = 0.ToString();
         }
+        else
+        {
+            for(int i=1; i<=45; i++)
+            {
+                if (i + _ballNumber > 45)
+                {
+                    ballText.text = ((_ballNumber + i) - 45).ToString();
+                }
+                else
+                {
+                    ballText.text = (_ballNumber + i).ToString();
+                }
+            
+                yield return new WaitForSeconds(0.04f);
+            }
+        }
+        
         
     }
     
