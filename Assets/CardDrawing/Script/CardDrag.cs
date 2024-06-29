@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Net;
 using System.Numerics;
+using CardScripts;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -18,7 +19,7 @@ public class CardDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
     private Vector3 mousePosition;
     private Vector3 worldPosition;
 
-    public Card card;
+    public CardScript cardScript;
 
     private bool _draggable = true;
 
@@ -28,10 +29,10 @@ public class CardDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
     // Start is called before the first frame update
     void Start()
     {
-        card = GetComponent<Card>();
+        cardScript = GetComponent<CardScript>();
         
-        Table1 = GameObject.Find("Type1");
-        Table2 = GameObject.Find("Type2");
+        Table1 = GameObject.Find("Numeric");
+        Table2 = GameObject.Find("Logical");
     }
 
     // Update is called once per frame
@@ -51,6 +52,11 @@ public class CardDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
     //     StopCoroutine(MouseOnCard());
     //     transform.position = startPosition;
     // }
+
+    public void ReInitialize()
+    {
+        _draggable = true;
+    }
 
     public void OnDrag(PointerEventData eventData)
     {
@@ -90,16 +96,17 @@ public class CardDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
         // 드롭 후 일정 y 좌표 이상일시, 카드 종류에 따라 table에 내려놓음
         if (transform.position.y >= 450)
         {
-            if (card.cardType == 0)
+            if (cardScript.cardSo.type is CardType.Numeric or CardType.Operator)
             {
                 transform.SetParent(Table1.transform);
                 // transform.localPosition = Vector3.zero;
             }
-            else
+            else if(cardScript.cardSo.type==CardType.Logical)
             {
                 transform.SetParent(Table2.transform);
                 // transform.localPosition = Vector3.zero;
             }
+            cardScript.UseCard();
             // 카드 
             StartCoroutine(MoveToTable());
         }

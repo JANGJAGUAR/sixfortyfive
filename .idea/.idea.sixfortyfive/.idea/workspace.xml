@@ -4,12 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e881114b-5d45-4284-b195-608898affcac" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AICheck.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AICheck.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+
+    <list default="true" id="7e538f2d-6f4a-45a5-9f75-8728d002b00d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.sixfortyfive/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.sixfortyfive/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CardDrawing/Script/CardDrag.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CardDrawing/Script/CardDrag.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CardDrawing/Script/CardDrawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CardDrawing/Script/CardDrawer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RevelationScripts/LogicalRevelation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RevelationScripts/LogicalRevelation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RevelationScripts/NumericRevelation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RevelationScripts/NumericRevelation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RevelationScripts/RevelationGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RevelationScripts/RevelationGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,50 +24,62 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/CardDrawing/Script/Card.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CardDrawing/Script/CardDrag.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/MoneyScripts/MoneyBar.cs" root0="FORCE_HIGHLIGHTING" />
+
+    <setting file="file://$PROJECT_DIR$/Assets/RevelationScripts/AvailableNumbers.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/RevelationScripts/NumericRevelation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/RevelationScripts/PublishBtn.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Cards.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TestScripts/NumericInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TestScripts/OKBtn.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventInterfaces.cs" root0="SKIP_HIGHLIGHTING" />
+
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
-  <component name="ProjectId" id="2iViow9f0dNG4pzwo7l32bOayZr" />
+
+  <component name="ProjectId" id="2iVg41flT6eFrelgzrLe14phacq" />
+
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Manager&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;/Users/zlzonpower/Library/Application Support/JetBrains/Rider2024.2/resharper-host/DecompilerCache&quot;,
-      &quot;/Users/zlzonpower/Library/Application Support/JetBrains/Rider2024.2/resharper-host/SourcesCache&quot;,
-      &quot;/Users/zlzonpower/Library/Application Support/Symbols/src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\wlssk\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
+      "C:\\Users\\wlssk\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\wlssk\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2022.3.35f1/Unity.app/Contents/MacOS/Unity" />
-      <option name="PROGRAM_PARAMETERS" value="-projectPath $PROJECT_DIR$ -debugCodeOptimization" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.35f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-projectPath C:\UnityProjects\sixfortyfive -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\UnityProjects\sixfortyfive" />
+
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2022.3.35f1/Unity.app/Contents/MacOS/Unity" />
-      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath $PROJECT_DIR$ -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.35f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\UnityProjects\sixfortyfive -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\UnityProjects\sixfortyfive" />
+
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
@@ -92,15 +108,16 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e881114b-5d45-4284-b195-608898affcac" name="Changes" comment="" />
-      <created>1719582324664</created>
+
+      <changelist id="7e538f2d-6f4a-45a5-9f75-8728d002b00d" name="Changes" comment="" />
+      <created>1719580965150</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1719582324664</updated>
-      <workItem from="1719582326990" duration="27992000" />
-      <workItem from="1719627497408" duration="5941000" />
-      <workItem from="1719636678499" duration="3875000" />
-      <workItem from="1719640577760" duration="12846000" />
+      <updated>1719580965150</updated>
+      <workItem from="1719580967672" duration="2962000" />
+      <workItem from="1719648337964" duration="205000" />
+      <workItem from="1719648566706" duration="4580000" />
+
     </task>
     <servers />
   </component>
@@ -108,14 +125,10 @@
     <option name="version" value="3" />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
-  <component name="UnityProjectDiscoverer">
-    <option name="hasUnityReference" value="true" />
-    <option name="unityProject" value="true" />
-    <option name="unityProjectFolder" value="true" />
-  </component>
+
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
-    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
+
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
 </project>
