@@ -2,10 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Random = System.Random;
 
 public class BallDeck : MonoBehaviour
 {
+    // [SerializeField]
+    // private TurnManager turnManager;
+    
     public List<int> ballNumberList;
     public List<int> openNumberList;
     private int maxBallNumber = 45;
@@ -30,15 +34,16 @@ public class BallDeck : MonoBehaviour
     void BallReset()
     {
         ballNumberList.Clear();
-        for (int i = 0; i < maxBallNumber; i++)
+        for (int i = 1; i <= maxBallNumber; i++)
         {
             ballNumberList.Add(i);
         }
         openNumberList.Clear();
     }
 
-    void BallShuffle()
+    public void BallShuffle()
     {
+        BallReset();
         var random = new Random();
         var randomizedList = ballNumberList.OrderBy(x => random.Next());
 
@@ -50,7 +55,7 @@ public class BallDeck : MonoBehaviour
             ballNumberList.Remove(i);
             
             // 깔려있는 카드 틀에 새로운 카드를 추가 
-            balls[openNumber].GetComponent<Balls>().AddBall(i);
+            balls[openNumber].GetComponent<Balls>().AddBall(i, openNumber);
             openNumber++;
         }
         

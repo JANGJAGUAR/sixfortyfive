@@ -15,8 +15,9 @@ GameObject:
   - component: {fileID: 3667071763822246547}
   - component: {fileID: 5129659553822698649}
   - component: {fileID: 4965312971987185993}
+  - component: {fileID: 3288761144059984671}
   m_Layer: 0
-  m_Name: Card
+  m_Name: CardDummyMerge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -204,3 +205,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3288761144059984671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2201585049683710493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b6f5347f269feb4b9bb2c1f68253057, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _cardNumber: 0
+  _cardOn: 0
+  _posX: 0
+  cardTransform: {fileID: 0}
+  cardDeck: {fileID: 0}
+  startPosX: 0
+  posTermX: 0
+  startPosY: 0
