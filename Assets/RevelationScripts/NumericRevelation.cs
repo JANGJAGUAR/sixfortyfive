@@ -13,11 +13,12 @@ public class NumericRevelation : MonoBehaviour
 
     private void Start()
     {
-        _text = transform.GetChild(0).GetComponent<TextMeshProUGUI>();
+        _text = gameObject.GetComponent<TextMeshProUGUI>();
         //_text = gameObject.GetComponent<TextMeshProUGUI>();
-        _text.text = "Numeric";
+        _text.text = "";
         
-        RevelationEventBus.Subscribe(RevelationEventType.APPLYCARDEFFECT, ChangeNumericPart);
+        RevelationEventBus.Subscribe(RevelationEventType.ApplyCardEffect, ChangeNumericPart);
+        RevelationEventBus.Subscribe(RevelationEventType.PublishRevelation, ChangeNumericPart);
     }
 
     private void Update()
@@ -25,9 +26,17 @@ public class NumericRevelation : MonoBehaviour
         
     }
 
-    void ChangeNumericPart(int numericPart, string str)
+    void ChangeNumericPart(int numericPart, string opStr, string logiStr)
     {
-        _text.text = $"{numericPart}";
+        
+        if (opStr.Equals("None"))
+        {
+            _text.text = $"{numericPart}";    
+        }
+        else
+        {
+            _text.text = $"{numericPart}"+opStr;
+        }
     }
     
     

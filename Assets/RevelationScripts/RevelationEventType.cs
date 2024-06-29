@@ -2,6 +2,7 @@
 {
     public enum RevelationEventType
     {
-        APPLYCARDEFFECT
+        ApplyCardEffect,
+        PublishRevelation,
     }
 }

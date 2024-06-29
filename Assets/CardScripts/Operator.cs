@@ -2,10 +2,10 @@
 {
     public enum Operator
     {
-        NONE,
-        PLUS,
-        MINUS,
-        MULITPLY,
-        DIVIDE,
+        None,
+        Plus,
+        Minus,
+        Multiply,
+        Divide,
     }
 }
