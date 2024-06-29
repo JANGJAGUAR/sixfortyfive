@@ -158,7 +158,8 @@ public class RevelationGenerator : MonoBehaviour
                 {
                     case Operator.None:
                     case Operator.Plus:
-                            numericPart += number;
+                        numericPart += number;
+                        
                         break;
                     case Operator.Minus:
                         numericPart -= number;
@@ -170,11 +171,14 @@ public class RevelationGenerator : MonoBehaviour
                         numericPart /= number;
                         break;
                 }
+                
+                if (numericPart > 99) numericPart = 99;
+                if (numericPart < 0) numericPart = 0;
 
                 _latestOperator = Operator.None;
                 break;
             case CardType.Operator:
-                if (_latestOperator != Operator.None) return;
+                //if (_latestOperator != Operator.None) return;
                 
                 _latestOperator = op;
                 
