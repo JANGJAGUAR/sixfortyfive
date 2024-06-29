@@ -15,13 +15,13 @@ GameObject:
   - component: {fileID: 5129659553822698649}
   - component: {fileID: 4965312971987185993}
   - component: {fileID: 2054202706009606152}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Card_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2370351310820803828
 RectTransform:
   m_ObjectHideFlags: 0
@@ -150,6 +150,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 648f4732290b649a487054766c0c14c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvas: {fileID: 0}
+  ticketTransform: {fileID: 0}
   cardScript: {fileID: 0}
   Table1: {fileID: 0}
   Table2: {fileID: 0}
