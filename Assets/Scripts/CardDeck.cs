@@ -8,8 +8,6 @@ using Random = System.Random;
 
 public class CardDeck : MonoBehaviour
 {
-    public List<Cards> cardsList;
-    
     public List<int> deckNumberList;
     public List<int> handNumberList;
     public List<int> trashNumberList;
@@ -28,14 +26,6 @@ public class CardDeck : MonoBehaviour
     
     void Start()
     {
-        cardsList = new List<Cards>();
-        
-        //TODO: 카드 덱 하드코딩
-        for (int i = 0; i < maxCardNumber; i++)
-        {
-            var card = new Cards(i);
-            cardsList.Add(card);
-        }
         
         deckNumberList = new List<int>();
         handNumberList = new List<int>();
