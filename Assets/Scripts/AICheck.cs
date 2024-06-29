@@ -8,6 +8,7 @@ public class AICheck : MonoBehaviour
 {
     [SerializeField]
     private List<GameObject> aiBalls;
+    
     //화면의 aiball 오브젝트 리스트
     void Start()
     {
@@ -51,14 +52,14 @@ public class AICheck : MonoBehaviour
         {
             for (int i = 0; i < 6; i++)
             {
-                if (answerBallList[6] == answerBallList[i])
+                if (chooseBallList[6] == answerBallList[i])
                 {
                     return 2;
                 }
             }
             
         }
-
+        
         if (cnt == 6)
         {
             return 1;
