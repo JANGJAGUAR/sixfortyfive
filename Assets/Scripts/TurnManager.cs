@@ -45,7 +45,7 @@ public class TurnManager : MonoBehaviour
     public void NextTurn()
     {
         Turn++;
-        aicheck.GetComponent<AICheck>().nowTurn++;
+        aicheck.GetComponent<AICheck>().AiNextTurn();
         
         if (Turn > 6)
         {

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using Unity.VisualScripting;
-using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.Timeline;
 using Random = System.Random;
@@ -24,6 +23,7 @@ public class AICheck : MonoBehaviour
 
     private List<List<int>> test;
 
+    private List<int> _noList;
     private List<int> _numberList;
     public int nowTurn;
     public int rank;
@@ -32,14 +32,17 @@ public class AICheck : MonoBehaviour
     //화면의 aiball 오브젝트 리스트
     void Start()
     {
+        _noList = new List<int>();
         _numberList = new List<int>();
-        nowTurn = 0;
+        
         _chooseBallList = new List<int>();
         //TODO: 지울 것
         test = new List<List<int>>();
         
         ResetCheck();
-        
+        nowTurn = -1;
+        AiNextTurn();
+
     }
     
 
@@ -48,40 +51,42 @@ public class AICheck : MonoBehaviour
         
     }
 
-    public void UpdateAvailableAnswerNumbers(List<int> answerSheet)
+    public void SetTest(List<int> list)
     {
+        Debug.Log(list.Count);
+        Debug.Log(test[nowTurn].Count);
+        Debug.Log(nowTurn);
         ResetNumberList();
-        //퍼블리쉬 누를때마다 초기화?
-        foreach (var answer in answerSheet)
+        foreach (var answer in list)
         {
-            _numberList.Remove(answer);
+            _noList.Remove(answer);
         }
-        foreach (var noAnswer in _numberList)
-        {
+        foreach (var noAnswer in _noList)
+        {                               
             test[nowTurn].Remove(noAnswer);
         }
-
-        // TODO: 확률 출력 (기왕이면 화면에)
-        if (test[nowTurn].Count != 0)
-        {
-            Debug.Log("1/");
-            Debug.Log(test[nowTurn].Count);
-        }
-        else
-        {
-            Debug.Log("1/45");
-        }
-        
+        // Debug.Log(_numberList.Count);
+        // test[nowTurn] = list;
+        Debug.Log(test[nowTurn].Count);
     }
-
     void ResetNumberList()
     {
-        _numberList.Clear();
+        _noList.Clear();
         for (int i = 1; i <= 45; i++)
         {
-            _numberList.Add(i);
+            _noList.Add(i);
         }
     }
+
+    
+
+    public void AiNextTurn()
+    {
+        nowTurn++;
+        
+        
+    }
+    
 
     public int ChooseOne(List<int> predictList, List<int> chooseBalList)
     {
@@ -284,7 +289,13 @@ public class AICheck : MonoBehaviour
         for (int i = 0; i < 6; i++)
         {
             test[i].Clear();
+            
+            for (int j = 1; j <= 45; j++)
+            {
+                test[i].Add(j);
+            }
         }
+        
         
     }
 }
