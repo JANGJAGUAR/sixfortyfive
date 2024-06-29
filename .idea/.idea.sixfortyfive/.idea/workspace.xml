@@ -5,7 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e538f2d-6f4a-45a5-9f75-8728d002b00d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/RevelationScripts/NumericRevelation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RevelationScripts/NumericRevelation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.sixfortyfive/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.sixfortyfive/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CardDrawing/Script/CardDrawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CardDrawing/Script/CardDrawer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CardScripts/Logic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CardScripts/Logic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Card_DivisorOf.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Card_DivisorOf.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Card_Greater.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Card_Greater.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Card_Less.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Card_Less.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Card_MultipleOf.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Card_MultipleOf.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Card_Not.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Card_Not.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RevelationScripts/LogicalRevelation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RevelationScripts/LogicalRevelation.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/RevelationScripts/RevelationGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RevelationScripts/RevelationGenerator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
     </list>
@@ -101,7 +109,7 @@
       <updated>1719580965150</updated>
       <workItem from="1719580967672" duration="2962000" />
       <workItem from="1719648337964" duration="205000" />
-      <workItem from="1719648566706" duration="5822000" />
+      <workItem from="1719648566706" duration="11634000" />
     </task>
     <servers />
   </component>

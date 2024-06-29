@@ -17,12 +17,39 @@ public class LogicalRevelation : MonoBehaviour
 
     void UpdateLogicalPart(int numeric, string opStr, string logicStr)
     {
-        if (logicStr.Equals("None"))
+        string str = "";
+        switch (logicStr)
         {
-            _text.text = "";
-            return;
+            case "None":
+                str = "None";
+                break;
+            case "Greater":
+                str = ">";
+                break;
+            case "EqualOrGreater":
+                str = ">=";
+                break;
+            case "Less":
+                str = "<";
+                break;
+            case "EqualOrLess":
+                str = "<=";
+                break;
+            case "MultipleOf":
+                str = "Multiple of ";
+                break;
+            case "DivisonOf":
+                str = "Factor of ";
+                break;
+            case "Not":
+                str = "!";
+                break;
+            case "Equal":
+                str = "=";
+                break;
         }
-        _text.text = logicStr;
+
+        _text.text = str;
     }
     
     

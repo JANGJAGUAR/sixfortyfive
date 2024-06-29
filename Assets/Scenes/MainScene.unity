@@ -940,15 +940,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24452f1c2bb41446f8436d0d0a64105a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardPrefabs:
+  numericCardPrefabs:
+  - {fileID: 2201585049683710493, guid: 9ac5f82028facea44b6141b8f7e2c91b, type: 3}
+  - {fileID: 2201585049683710493, guid: eac9b49bbf8603a4b9115d4dbab3da9e, type: 3}
+  - {fileID: 2201585049683710493, guid: f87ba7fc43810ca43a75565e3024a533, type: 3}
+  - {fileID: 2201585049683710493, guid: 00dd50b6cc3e01444b6ea26e19e32313, type: 3}
+  - {fileID: 2201585049683710493, guid: a438b20b9812c8d4083b459869f0508e, type: 3}
+  - {fileID: 2201585049683710493, guid: 9d111a28c3390e0459ce801f1a3e8d19, type: 3}
   - {fileID: 2201585049683710493, guid: 412dbdc5b0b7126439777d75ee574947, type: 3}
   - {fileID: 2201585049683710493, guid: a20a8a6447f7fa648b8c026cf6bee7d9, type: 3}
   - {fileID: 2201585049683710493, guid: 18c69890f1349634d9457dc252bb22d7, type: 3}
+  operatorCardPrefabs:
   - {fileID: 2201585049683710493, guid: 6887a5e928af2dd418487a216885f3b3, type: 3}
   - {fileID: 2201585049683710493, guid: 685e4c38eb0c1d0458852ae537865441, type: 3}
   - {fileID: 2201585049683710493, guid: 44a976af691143f4faee38bdd16eb293, type: 3}
-  numericCards: {fileID: 941344594}
-  logicalCards: {fileID: 526272638}
+  logicCardPrefabs:
+  - {fileID: 2201585049683710493, guid: a30eeb06033641d428876a741040d8ec, type: 3}
+  - {fileID: 2201585049683710493, guid: 101a5ce37eb342f43ba70e7ed9059c14, type: 3}
+  - {fileID: 2201585049683710493, guid: 365210a9796ec1f46b031ed062ce79f8, type: 3}
+  - {fileID: 2201585049683710493, guid: fb695b6b79916214aafbc23512a4618c, type: 3}
+  cardPrefabs: []
+  numericCardsTable: {fileID: 941344594}
+  logicalCardsTable: {fileID: 526272638}
   card: {fileID: 0}
   hand: {fileID: 754159514}
 --- !u!4 &1194844786
