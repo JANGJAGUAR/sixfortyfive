@@ -18,8 +18,8 @@ public class MoneyManager : MonoBehaviour
     public GameObject deltaText;
     
     // 일단 직접 입력
-    public Vector3 moneyDeltaTextPosition; 
-    public Vector3 faithDeltaTextPosition;
+    public Vector3 moneyDeltaTextPosition = Vector3.zero; 
+    public Vector3 faithDeltaTextPosition = Vector3.zero;
 
     public static MoneyManager Instance;
 
@@ -36,43 +36,6 @@ public class MoneyManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    // private void Update()
-    // {
-    //     // 임시 코드
-    //     // 등수에 따른 차등 보상, 수치 변경 가능 / type 0 : money, 1: faith
-    //     if (Input.GetKeyDown(KeyCode.Alpha1))
-    //     {
-    //         CreateDeltaText(0, 1000);
-    //         // CreateDeltaText(1, 30.0f);
-    //     }
-    //     else if (Input.GetKeyDown(KeyCode.Alpha2))
-    //     {
-    //         CreateDeltaText(0, 500);
-    //         // CreateDeltaText(1, 15.0f);
-    //     }
-    //     else if (Input.GetKeyDown(KeyCode.Alpha3))
-    //     {
-    //         CreateDeltaText(0, 300);
-    //         // CreateDeltaText(1, 10.0f);
-    //     }
-    //     else if (Input.GetKeyDown(KeyCode.Alpha4))
-    //     {
-    //         CreateDeltaText(0, 100);
-    //         // CreateDeltaText(1, 5.0f);
-    //     }
-    //     else if (Input.GetKeyDown(KeyCode.Alpha5))
-    //     {
-    //         CreateDeltaText(0, 10);
-    //         // CreateDeltaText(1, 3.0f);
-    //     }
-    //
-    //     if (Input.GetKeyDown(KeyCode.Alpha0))
-    //     {
-    //         // 죽어라
-    //     }
-    //     
-    // }
 
     // 해제하여 사용
     // 등수를 인자로 받아요
@@ -98,6 +61,10 @@ public class MoneyManager : MonoBehaviour
         else if (rank == 5)
         {
             CreateDeltaText(0, 10);
+        }
+        else
+        {
+            return;
         }
     
     }

@@ -1,7 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
+using Unity.VisualScripting;
+using UnityEditor.Rendering;
 using UnityEngine;
+using UnityEngine.Timeline;
 using Random = System.Random;
 
 public class AICheck : MonoBehaviour
@@ -22,6 +26,7 @@ public class AICheck : MonoBehaviour
 
     private List<int> _numberList;
     public int nowTurn;
+    public int rank;
 
 
     //화면의 aiball 오브젝트 리스트
@@ -32,19 +37,7 @@ public class AICheck : MonoBehaviour
         _chooseBallList = new List<int>();
         //TODO: 지울 것
         test = new List<List<int>>();
-        List<int> test1 = new List<int>();
-        List<int> test2 = new List<int>();
-        List<int> test3 = new List<int>();
-        List<int> test4 = new List<int>();
-        List<int> test5 = new List<int>();
-        List<int> test6 = new List<int>();
         
-        test.Add(test1);
-        test.Add(test2);
-        test.Add(test3);
-        test.Add(test4);
-        test.Add(test5);
-        test.Add(test6);
         ResetCheck();
         
     }
@@ -156,6 +149,7 @@ public class AICheck : MonoBehaviour
     
     public int Result(List<int> chooseBallList, List<int> answerBallList)
     {
+        rank = 0;
         
         // 맞은 개수 체크
         int cnt = 0;
@@ -183,7 +177,7 @@ public class AICheck : MonoBehaviour
 
                 {
                     GameManager.Instance.isClear = true;
-                    MoneyManager.Instance.AddMoney(2);
+                    rank = 2;
                 }
             }
             
@@ -192,29 +186,73 @@ public class AICheck : MonoBehaviour
         if (cnt == 6)
         {
             GameManager.Instance.isClear = true;
-            MoneyManager.Instance.AddMoney(1);
+            rank = 1;
         }
 
         if (cnt == 5)
         {
             GameManager.Instance.isClear = true;
-            MoneyManager.Instance.AddMoney(3);
+            rank = 3;
         }
 
         if (cnt == 4)
         {
             GameManager.Instance.isClear = true;
-            MoneyManager.Instance.AddMoney(4);
+            rank = 4;
         }
 
         if (cnt == 3)
         {
             GameManager.Instance.isClear = true;
-            MoneyManager.Instance.AddMoney(5);
+            rank = 5;
         }
 
-        GameManager.Instance.isClear = false;
+        if (cnt == 2 || cnt == 1 || cnt == 0)
+        {
+            GameManager.Instance.isClear = false;
+        }
+        
+        MoneyManager.Instance.AddMoney(rank);
+        Debug.Log("여기까지 음?");
+        StartCoroutine(PrintResult(rank));
+
         return 0;
+    }
+
+    public GameObject rankResult;
+    public TMP_Text resultText;
+    IEnumerator PrintResult(int rank)
+    {
+        // 빰빰빰
+        float waitingTime = 0.0f;
+
+        while (waitingTime <= 6.0f)
+        {
+            waitingTime += Time.deltaTime;
+            yield return null;
+        }
+        
+        rankResult.SetActive(true);
+        resultText.text = rank.ToString() + "위";
+
+        Debug.Log("VAR");
+        
+        if (rank == 0)
+        {
+            resultText.color = Color.red;
+            resultText.text = "꼴등";
+        }
+
+        waitingTime = 0;
+
+        while (waitingTime <= 2.0f)
+        {
+            waitingTime += Time.deltaTime;
+            yield return null;
+        }
+        
+        GameManager.Instance.ChangeScene("TestEndScene");
+
     }
 
     public void ResetCheck()
@@ -228,6 +266,19 @@ public class AICheck : MonoBehaviour
         }
         
         _chooseBallList.Clear();
+        List<int> test1 = new List<int>();
+        List<int> test2 = new List<int>();
+        List<int> test3 = new List<int>();
+        List<int> test4 = new List<int>();
+        List<int> test5 = new List<int>();
+        List<int> test6 = new List<int>();
+        
+        test.Add(test1);
+        test.Add(test2);
+        test.Add(test3);
+        test.Add(test4);
+        test.Add(test5);
+        test.Add(test6);
         
         //TODO: 지울 것
         for (int i = 0; i < 6; i++)
