@@ -31,7 +31,7 @@ public class BallDeck : MonoBehaviour
         
     }
 
-    void BallReset()
+    public void BallReset()
     {
         ballNumberList.Clear();
         for (int i = 1; i <= maxBallNumber; i++)
