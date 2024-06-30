@@ -200,7 +200,7 @@ public class AICheck : MonoBehaviour
             score = 2000000000;
         }
 
-        if (cnt == 5 || rank != 2)
+        if (cnt == 5 && rank != 2)
         {
             GameManager.Instance.isClear = true;
             rank = 3;
