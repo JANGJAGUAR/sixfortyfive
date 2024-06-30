@@ -39,7 +39,7 @@ public class AvailableNumbers : MonoBehaviour
             }
             else
             {
-                txt = $"<color=#ff0000>{i}</color > ";
+                txt = $"<color=#737373>{i}</color > ";
             }
 
             _text.text += txt;
