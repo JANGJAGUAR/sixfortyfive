@@ -19,6 +19,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        Screen.SetResolution(1920, 1080, true);
+    }
+
     // instance
     public static GameManager Instance;
 

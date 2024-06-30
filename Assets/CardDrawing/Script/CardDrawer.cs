@@ -197,7 +197,7 @@ public class CardDrawer : MonoBehaviour
             RectTransform rectTransform = card.GetComponent<RectTransform>();
             rectTransform.localPosition = Vector3.zero;
             rectTransform.localRotation = Quaternion.identity;
-            rectTransform.localScale = new Vector3(20,20,0);
+            rectTransform.localScale = new Vector3(30,30,0);
             
             //_unusedCards.Add(card);
 

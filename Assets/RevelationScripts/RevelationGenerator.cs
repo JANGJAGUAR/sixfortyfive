@@ -168,7 +168,7 @@ public class RevelationGenerator : MonoBehaviour
                         }
                         else if (_lastestLogic == Logic.Not)
                         {
-                            _lastestLogic = Logic.Not;
+                            _lastestLogic = Logic.Equal;
                         }
                         else if (_lastestLogic==Logic.Equal)
                         {
