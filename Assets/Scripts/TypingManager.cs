@@ -36,6 +36,7 @@ public class TypingManager : MonoBehaviour
 
     public void Typing(string[] dialogs, TextMeshProUGUI textObj)
     {
+        SoundManager.Instance.PlayKeyBoardSound();
         isDialogEnd = false;
         dialogSave = dialogs;
         tmpSave = textObj;
@@ -56,6 +57,7 @@ public class TypingManager : MonoBehaviour
 
     IEnumerator Typer(char[] chars, TextMeshProUGUI textObj)
     {
+        
         int currentChar = 0;
         int charLength = chars.Length;
         isTypingEnd = false;

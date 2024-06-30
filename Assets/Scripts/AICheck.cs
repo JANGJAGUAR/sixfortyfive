@@ -144,6 +144,7 @@ public class AICheck : MonoBehaviour
         {
             aiBalls[openNumber].SetActive(true);
             aiBalls[openNumber].GetComponent<Balls>().AddBall(i, openNumber);
+            SoundManager.Instance.PlayBallShakeSound();
             openNumber++;
         }
 

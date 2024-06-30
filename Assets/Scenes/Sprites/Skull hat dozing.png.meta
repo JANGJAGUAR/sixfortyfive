@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7172146b0dba24d2aa11c80ed47f5303
+guid: ba2e6f51803fd4f8983174c8db0049c6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,526 +97,526 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Side Skull Hat Dozing Sheet (1)_0
+      name: Skull hat dozing_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 3200
-        width: 256
-        height: 800
+        y: 4096
+        width: 253
+        height: 1024
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eeaff732f1a124ef5a2395a2dc77288d
-      internalID: 609799133
+      spriteID: 60e4ac7df7cb94c859cfb926f4b31d1e
+      internalID: -414897145
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Side Skull Hat Dozing Sheet (1)_1
+      name: Skull hat dozing_1
       rect:
         serializedVersion: 2
-        x: 256
-        y: 3200
+        x: 253
+        y: 4096
         width: 256
-        height: 800
+        height: 1024
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 132b2d06085bc4fad8d69d262e820393
-      internalID: -1319536986
+      spriteID: e1e6d5b49c4b44e7ab348baf9fa89062
+      internalID: -83253348
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Side Skull Hat Dozing Sheet (1)_2
+      name: Skull hat dozing_2
       rect:
         serializedVersion: 2
-        x: 512
-        y: 3200
+        x: 509
+        y: 4096
         width: 256
-        height: 800
+        height: 1024
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad67c7e29992344c9a5883ff7c69b697
-      internalID: 2135869737
+      spriteID: d68c62a661f434986bff2d28a10f18f2
+      internalID: 1639138555
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Side Skull Hat Dozing Sheet (1)_3
+      name: Skull hat dozing_3
       rect:
         serializedVersion: 2
-        x: 768
-        y: 3200
+        x: 765
+        y: 4096
         width: 256
-        height: 800
+        height: 1024
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d75e0b85975848e9aaf244ceeeb3cf6
-      internalID: -2058131268
+      spriteID: 305fa434de9db437c91d140c66e32c15
+      internalID: -1448166752
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Side Skull Hat Dozing Sheet (1)_4
+      name: Skull hat dozing_4
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 3200
-        width: 256
-        height: 800
+        x: 1021
+        y: 4096
+        width: 259
+        height: 1024
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6bb86c55019b94c38bb90ae0f0dc1360
-      internalID: -1388888039
+      spriteID: b8f7069ef61e248e08b9c237d71452ca
+      internalID: -188974819
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Side Skull Hat Dozing Sheet (1)_5
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 2400
-        width: 256
-        height: 800
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 20b9dd38ba5244c24a99e90731af3df9
-      internalID: 1804963478
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Side Skull Hat Dozing Sheet (1)_6
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 2400
-        width: 256
-        height: 800
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1a27c1d6e0f7d4a6ca525925272ea144
-      internalID: -794620771
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Side Skull Hat Dozing Sheet (1)_7
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 2400
-        width: 256
-        height: 800
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9d065849e1e4844389c5e72ebd81201e
-      internalID: 1000844864
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Side Skull Hat Dozing Sheet (1)_8
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 2400
-        width: 256
-        height: 800
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7cec4f222664147b1a83a88efdf902a0
-      internalID: 1285539179
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Side Skull Hat Dozing Sheet (1)_9
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 2400
-        width: 256
-        height: 800
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1272b5df1fa87491a9714f8a3dd36f53
-      internalID: 235437549
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Side Skull Hat Dozing Sheet (1)_10
+      name: Skull hat dozing_5
       rect:
         serializedVersion: 2
         x: 0
-        y: 1600
-        width: 256
-        height: 800
+        y: 3072
+        width: 253
+        height: 1024
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 16453801019724b2eb491ccdbc0f2eba
-      internalID: -1298662544
+      spriteID: 1e20427daa71d4537a8cab62295abb1b
+      internalID: 1621901086
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Side Skull Hat Dozing Sheet (1)_11
+      name: Skull hat dozing_6
       rect:
         serializedVersion: 2
-        x: 256
-        y: 1600
+        x: 253
+        y: 3072
         width: 256
-        height: 800
+        height: 1024
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c304e2d9d88a4c2a835cfc284c298e9
-      internalID: -438634698
+      spriteID: 1b8b8afd5848c4410b23fc7970765fd1
+      internalID: 1504245007
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Side Skull Hat Dozing Sheet (1)_12
+      name: Skull hat dozing_7
       rect:
         serializedVersion: 2
-        x: 512
-        y: 1600
+        x: 509
+        y: 3072
         width: 256
-        height: 800
+        height: 1024
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 426654cacf7644d4593d7e6cd4c4c933
-      internalID: -247083468
+      spriteID: 3b81454e3854d471e8cf1e43648567e4
+      internalID: -1180971708
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Side Skull Hat Dozing Sheet (1)_13
+      name: Skull hat dozing_8
       rect:
         serializedVersion: 2
-        x: 768
-        y: 1600
+        x: 765
+        y: 3072
         width: 256
-        height: 800
+        height: 1024
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e3da34337fc443ecb2a1d3732c847cf
-      internalID: -192692547
+      spriteID: 93841b41a1f7f47a58561ebe31b58a50
+      internalID: 593771501
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Side Skull Hat Dozing Sheet (1)_14
+      name: Skull hat dozing_9
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 1600
-        width: 256
-        height: 800
+        x: 1021
+        y: 3072
+        width: 259
+        height: 1024
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ccbcb02029d2b44c6accb6abe55852ee
-      internalID: -1133729074
+      spriteID: a48a4dea9e58f424c8ab6a33780cc527
+      internalID: -621332032
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Side Skull Hat Dozing Sheet (1)_15
+      name: Skull hat dozing_10
       rect:
         serializedVersion: 2
         x: 0
-        y: 800
-        width: 256
-        height: 800
+        y: 2048
+        width: 253
+        height: 1024
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 711d07153ef3e4f58b061971d027fd22
-      internalID: -1448197923
+      spriteID: 956556e8a9aad46f7a32508b12820595
+      internalID: -314994811
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Side Skull Hat Dozing Sheet (1)_16
+      name: Skull hat dozing_11
       rect:
         serializedVersion: 2
-        x: 256
-        y: 800
+        x: 253
+        y: 2047
         width: 256
-        height: 800
+        height: 1025
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c26cfcb1adb38402791c47424545bc0c
-      internalID: -181558223
+      spriteID: feb74a5868cab4d41af9893e8c72df06
+      internalID: 2121389320
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Side Skull Hat Dozing Sheet (1)_17
+      name: Skull hat dozing_12
       rect:
         serializedVersion: 2
-        x: 512
-        y: 800
+        x: 509
+        y: 2048
         width: 256
-        height: 800
+        height: 1024
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97db95283e38b432ea843a288872a172
-      internalID: -1845402840
+      spriteID: 8a1ce55df64ba45299b2422f4f21ae58
+      internalID: -1222007346
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Side Skull Hat Dozing Sheet (1)_18
+      name: Skull hat dozing_13
       rect:
         serializedVersion: 2
-        x: 768
-        y: 800
+        x: 765
+        y: 2048
         width: 256
-        height: 800
+        height: 1024
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 25e13f105c45b4c8d92d11706abda586
-      internalID: -2128166272
+      spriteID: 61e78b40a414b4aaa81b30502fa9a779
+      internalID: -765814908
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Side Skull Hat Dozing Sheet (1)_19
+      name: Skull hat dozing_14
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 800
+        x: 1021
+        y: 2048
         width: 256
-        height: 800
+        height: 1024
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e47b63bd815f74ba5a1e410fb5a170bc
-      internalID: 2046628300
+      spriteID: 5543c30307ed34af48ae558305bafd6c
+      internalID: -1309079355
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Side Skull Hat Dozing Sheet (1)_20
+      name: Skull hat dozing_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 253
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9b9f7c43eec44588aab57ec2cf8cc57
+      internalID: 1710236691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull hat dozing_16
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 1024
+        width: 256
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 482f27d35e1824b108d317b2e53776d9
+      internalID: -316584281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull hat dozing_17
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 1024
+        width: 256
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3feb772096b904c3ab636a71526e1275
+      internalID: 1482436169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull hat dozing_18
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 1024
+        width: 256
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9b807c8dd20e469fa68d7dbdd7992f6
+      internalID: 1830130167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull hat dozing_19
+      rect:
+        serializedVersion: 2
+        x: 1021
+        y: 1024
+        width: 257
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b66be58115cf64ba48b83558a3f85c80
+      internalID: -1531596416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull hat dozing_20
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 256
-        height: 800
+        width: 253
+        height: 1024
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96ea1c5d45837473bb91c31297fdcb46
-      internalID: -1364481977
+      spriteID: 4a409e1485e5140db9db93dc6e02af27
+      internalID: 2037252413
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Side Skull Hat Dozing Sheet (1)_21
+      name: Skull hat dozing_21
       rect:
         serializedVersion: 2
-        x: 256
+        x: 253
         y: 0
-        width: 256
-        height: 800
+        width: 259
+        height: 1024
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a78ec2ee488474d7f92fd0de22e19522
-      internalID: -1919113073
+      spriteID: ea650798870fd4a59b5f9cda97363954
+      internalID: 872518234
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Side Skull Hat Dozing Sheet (1)_22
+      name: Skull hat dozing_22
       rect:
         serializedVersion: 2
         x: 512
         y: 0
         width: 256
-        height: 800
+        height: 1024
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b0198e8702925418ca2dff10c1a85ca9
-      internalID: -1469842017
+      spriteID: 531d20d9b846f44dca3803ae8ac722f4
+      internalID: 1518168302
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Side Skull Hat Dozing Sheet (1)_23
+      name: Skull hat dozing_23
       rect:
         serializedVersion: 2
         x: 768
         y: 0
         width: 256
-        height: 800
+        height: 1024
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0509510a4df5a4ec1af425bec842b5de
-      internalID: -1581286307
+      spriteID: 83fbfeccf61fe4e9cbf076201ee7f7b4
+      internalID: -1899775382
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Side Skull Hat Dozing Sheet (1)_24
+      name: Skull hat dozing_24
       rect:
         serializedVersion: 2
         x: 1024
         y: 0
         width: 256
-        height: 800
+        height: 1024
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b09129859f2bb401c895c71b8ee855cc
-      internalID: -1509486174
+      spriteID: dfd252805f814411b88428ad920c31f7
+      internalID: 1571233890
       vertices: []
       indices: 
       edges: []
@@ -632,31 +632,31 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Side Skull Hat Dozing Sheet (1)_0: 609799133
-      Side Skull Hat Dozing Sheet (1)_1: -1319536986
-      Side Skull Hat Dozing Sheet (1)_10: -1298662544
-      Side Skull Hat Dozing Sheet (1)_11: -438634698
-      Side Skull Hat Dozing Sheet (1)_12: -247083468
-      Side Skull Hat Dozing Sheet (1)_13: -192692547
-      Side Skull Hat Dozing Sheet (1)_14: -1133729074
-      Side Skull Hat Dozing Sheet (1)_15: -1448197923
-      Side Skull Hat Dozing Sheet (1)_16: -181558223
-      Side Skull Hat Dozing Sheet (1)_17: -1845402840
-      Side Skull Hat Dozing Sheet (1)_18: -2128166272
-      Side Skull Hat Dozing Sheet (1)_19: 2046628300
-      Side Skull Hat Dozing Sheet (1)_2: 2135869737
-      Side Skull Hat Dozing Sheet (1)_20: -1364481977
-      Side Skull Hat Dozing Sheet (1)_21: -1919113073
-      Side Skull Hat Dozing Sheet (1)_22: -1469842017
-      Side Skull Hat Dozing Sheet (1)_23: -1581286307
-      Side Skull Hat Dozing Sheet (1)_24: -1509486174
-      Side Skull Hat Dozing Sheet (1)_3: -2058131268
-      Side Skull Hat Dozing Sheet (1)_4: -1388888039
-      Side Skull Hat Dozing Sheet (1)_5: 1804963478
-      Side Skull Hat Dozing Sheet (1)_6: -794620771
-      Side Skull Hat Dozing Sheet (1)_7: 1000844864
-      Side Skull Hat Dozing Sheet (1)_8: 1285539179
-      Side Skull Hat Dozing Sheet (1)_9: 235437549
+      Skull hat dozing_0: -414897145
+      Skull hat dozing_1: -83253348
+      Skull hat dozing_10: -314994811
+      Skull hat dozing_11: 2121389320
+      Skull hat dozing_12: -1222007346
+      Skull hat dozing_13: -765814908
+      Skull hat dozing_14: -1309079355
+      Skull hat dozing_15: 1710236691
+      Skull hat dozing_16: -316584281
+      Skull hat dozing_17: 1482436169
+      Skull hat dozing_18: 1830130167
+      Skull hat dozing_19: -1531596416
+      Skull hat dozing_2: 1639138555
+      Skull hat dozing_20: 2037252413
+      Skull hat dozing_21: 872518234
+      Skull hat dozing_22: 1518168302
+      Skull hat dozing_23: -1899775382
+      Skull hat dozing_24: 1571233890
+      Skull hat dozing_3: -1448166752
+      Skull hat dozing_4: -188974819
+      Skull hat dozing_5: 1621901086
+      Skull hat dozing_6: 1504245007
+      Skull hat dozing_7: -1180971708
+      Skull hat dozing_8: 593771501
+      Skull hat dozing_9: -621332032
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
