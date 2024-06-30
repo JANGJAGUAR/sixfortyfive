@@ -47,7 +47,9 @@ public class EndObject : MonoBehaviour
     {
         endMessage.text = "신도가 당신을 숭배합니다.";
         endMessage.fontSize = 120;
-        finalScore.text = "Score : " + GameManager.Instance.finalScore;
+        finalScore.text = "Score : \n" + GameManager.Instance.finalScore;
+        endMessage.color = Color.yellow;
+        StartCoroutine(TextChange());
     }
 
     IEnumerator TextChange()
