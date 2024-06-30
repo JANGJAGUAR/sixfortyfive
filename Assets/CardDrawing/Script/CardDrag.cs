@@ -81,7 +81,7 @@ public class CardDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
         _draggable = false;
         
         // 드롭 후 일정 y 좌표 이상일시, 카드 종류에 따라 table에 내려놓음
-        if (transform.position.y >= 450)
+        if (transform.position.y >= 300)
         {
             if (cardScript.cardSo.type is CardType.Numeric or CardType.Operator)
             {

@@ -38,7 +38,7 @@ public class EndObject : MonoBehaviour
         continueButton.GetComponent<SceneChangeBtn>().reset = true;
         endMessage.text = "신도가 당신을 저주합니다.";
         endMessage.fontSize = 120;
-        finalScore.text = "Score : " + GameManager.Instance.finalScore;
+        finalScore.text = "Score : \n" + GameManager.Instance.finalScore;
         endMessage.color = new Color32(202, 0 ,12, 255);
         StartCoroutine(TextChange());
     }
@@ -46,10 +46,8 @@ public class EndObject : MonoBehaviour
     public void VictoryGame()
     {
         endMessage.text = "신도가 당신을 숭배합니다.";
-        endMessage.fontSize = 150;
+        endMessage.fontSize = 120;
         finalScore.text = "Score : " + GameManager.Instance.finalScore;
-        endMessage.color = Color.yellow;
-        StartCoroutine(TextChange());
     }
 
     IEnumerator TextChange()

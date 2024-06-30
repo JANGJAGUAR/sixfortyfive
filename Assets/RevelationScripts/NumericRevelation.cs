@@ -44,7 +44,7 @@ public class NumericRevelation : MonoBehaviour
                 op = "\u00f7";
                 break;
         }
-        _text.text = $"{numericPart} "+op;
+        _text.text = $"{numericPart}\n"+op;
     }
     
     

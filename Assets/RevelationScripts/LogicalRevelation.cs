@@ -21,7 +21,7 @@ public class LogicalRevelation : MonoBehaviour
         switch (logicStr)
         {
             case "None":
-                str = "None";
+                str = "";
                 break;
             case "Greater":
                 str = ">";
