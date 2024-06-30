@@ -11,6 +11,11 @@ public class GameManager : MonoBehaviour
 
     public string sceneName = "MainMenu";
 
+    private void Start()
+    {
+        Screen.SetResolution(1920, 1080, true);
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Dollar))
