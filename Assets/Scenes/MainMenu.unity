@@ -153,8 +153,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bgmAudioSource: {fileID: 0}
   audioSources: []
-  introBgm: {fileID: 8300000, guid: 40a44041f1bcd0346999ea15f7c4c7c8, type: 3}
-  normalBgm: {fileID: 8300000, guid: ca0c9456ef2174a4896ca42e4c8acf1b, type: 3}
+  introBgm: {fileID: 0}
+  normalBgm: {fileID: 8300000, guid: a36aaff74d0e36f468bb36d6147fc369, type: 3}
   winBgm: {fileID: 8300000, guid: 98ad0fba11126144594ecf69f9f09234, type: 3}
   loseBgm: {fileID: 8300000, guid: 6c5d6d892904c844fa58db98d2f91f5b, type: 3}
   btnClickSoundEffect: {fileID: 8300000, guid: 574acdf76206009478ba21cd427bd6bc, type: 3}
@@ -1119,6 +1119,7 @@ GameObject:
   - component: {fileID: 1980610651}
   - component: {fileID: 1980610650}
   - component: {fileID: 1980610649}
+  - component: {fileID: 1980610652}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1200,6 +1201,66 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1980610652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1980610648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeTrigger: {fileID: 1980610651}
+  volumeLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  stopNaNPropagation: 1
+  finalBlitToCameraTarget: 0
+  antialiasingMode: 0
+  temporalAntialiasing:
+    jitterSpread: 0.75
+    sharpness: 0.25
+    stationaryBlending: 0.95
+    motionBlending: 0.85
+  subpixelMorphologicalAntialiasing:
+    quality: 2
+  fastApproximateAntialiasing:
+    fastMode: 0
+    keepAlpha: 0
+  fog:
+    enabled: 1
+    excludeSkybox: 1
+  debugLayer:
+    lightMeter:
+      width: 512
+      height: 256
+      showCurves: 1
+    histogram:
+      width: 512
+      height: 256
+      channel: 3
+    waveform:
+      exposure: 0.12
+      height: 256
+    vectorscope:
+      size: 256
+      exposure: 0.12
+    overlaySettings:
+      linearDepth: 0
+      motionColorIntensity: 4
+      motionGridSize: 64
+      colorBlindnessType: 0
+      colorBlindnessStrength: 1
+  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
+  m_ShowToolkit: 0
+  m_ShowCustomSorter: 0
+  breakBeforeColorGrading: 0
+  m_BeforeTransparentBundles: []
+  m_BeforeStackBundles: []
+  m_AfterStackBundles: []
 --- !u!1001 &3693837591186228873
 PrefabInstance:
   m_ObjectHideFlags: 0
