@@ -9,6 +9,9 @@ public class TypingManager : MonoBehaviour
 {
     public static TypingManager instance;
 
+    public GameObject howToImage;
+    public GameObject Itext;
+
     public float timeForCharacter;
     public float timeForCharacterFast;
 
@@ -42,6 +45,11 @@ public class TypingManager : MonoBehaviour
         tmpSave = textObj;
         if (dialogNumber < dialogs.Length)
         {
+            if (dialogNumber == 4)
+            {
+                howToImage.SetActive(true);
+                Itext.transform.position += Vector3.up * 100;
+            }
             char[] chars = dialogs[dialogNumber].ToCharArray();
             StartCoroutine(Typer(chars, textObj));
         }
